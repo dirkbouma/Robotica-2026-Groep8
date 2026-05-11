@@ -22,4 +22,5 @@ void loop() {
   Serial.println("LED UIT");
   ax12a.ledStatus(ID, 1);
   delay(500);
+  delay(100);
 }
