@@ -1,89 +1,79 @@
 #include <Arduino.h>
 #include <Dynamixel2Arduino.h>
+#include <WiFi.h>
+#include <esp_now.h>
 
-// --- ESP32 HARDWARE PINNEN ---
+// --- Hardware ---
 #define DXL_TX_PIN   17
 #define DXL_RX_PIN   16
-
-// --- 74HC125 PINNEN ---
-#define TX_ENABLE_PIN 4  
-#define RX_ENABLE_PIN 5  
+#define TX_ENABLE_PIN 32  
+#define RX_ENABLE_PIN 33  
 #define DXL_DIR_PIN  RX_ENABLE_PIN
-
-// --- DYNAMIXEL INSTELLINGEN ---
-const uint8_t DXL_ID = 254;               // Zorg dat dit jouw correcte ID is!
-const float DXL_PROTOCOL_VERSION = 1.0; 
-const uint32_t BAUDRATE = 1000000;      
-
 HardwareSerial DxlSerial(2);
 Dynamixel2Arduino dxl(DxlSerial, DXL_DIR_PIN);
 
-// --- TIMERS VOOR MULTITASKING ---
-unsigned long vorigeBewegingTijd = 0;
-const unsigned long BEWEEG_INTERVAL = 2000; // Wissel elke 2 seconden van richting
+// --- ESP-NOW ---
+typedef struct struct_message {
+  int x;
+  int y;
+  float maxSpeed;
+} struct_message;
 
-unsigned long vorigeLeesTijd = 0;
-const unsigned long LEES_INTERVAL = 50;     // Lees elke 50 milliseconden (20x per seconde)
+struct_message inkomendeData;
+unsigned long laatsteBerichtTijd = 0;
+float virtueleDoelPositie = 512.0; // Float voor super-vloeiende kleine stapjes
 
-// --- POSITIE INSTELLINGEN ---
-const int POSITIE_A = 300;
-const int POSITIE_B = 700;
-bool gaNaarB = true; // Houdt bij welke kant we op gaan
+// --- Limieten ---
+const uint8_t DXL_ID = 5;
+const int SERVO_MIN = 100;
+const int SERVO_MAX = 900;
 
-// =========================================================================
-// DE SOFTWARE INVERTER (Hardware Interrupt)
-// =========================================================================
+void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
+  memcpy(&inkomendeData, incomingData, sizeof(inkomendeData));
+  laatsteBerichtTijd = millis();
+}
+
 void IRAM_ATTR flipDirectionPin() {
   digitalWrite(TX_ENABLE_PIN, !digitalRead(RX_ENABLE_PIN));
 }
-// =========================================================================
 
 void setup() {
   Serial.begin(115200);
-  delay(1000);
-  Serial.println("\n--- Start Sweep & Uitlees Test ---");
-
   pinMode(TX_ENABLE_PIN, OUTPUT);
   attachInterrupt(digitalPinToInterrupt(RX_ENABLE_PIN), flipDirectionPin, CHANGE);
-  digitalWrite(TX_ENABLE_PIN, HIGH); 
-
-  DxlSerial.begin(BAUDRATE, SERIAL_8N1, DXL_RX_PIN, DXL_TX_PIN);
-  dxl.begin(BAUDRATE);
-  dxl.setPortProtocolVersion(DXL_PROTOCOL_VERSION);
   
-  // BELANGRIJK: Om te kunnen bewegen, moeten we Torque aanzetten!
+  DxlSerial.begin(1000000, SERIAL_8N1, DXL_RX_PIN, DXL_TX_PIN);
+  dxl.begin(1000000);
+  dxl.setPortProtocolVersion(1.0);
   dxl.setOperatingMode(DXL_ID, OP_POSITION);
   dxl.torqueOn(DXL_ID);
 
-  Serial.println("Klaar! Starten met bewegen en lezen...\n");
+  WiFi.mode(WIFI_STA);
+  esp_now_init();
+  esp_now_register_recv_cb(OnDataRecv);
+  
+  // Begin op huidige fysieke positie om schokken te voorkomen
+  virtueleDoelPositie = dxl.getPresentPosition(DXL_ID);
 }
 
 void loop() {
-  unsigned long huidigeTijd = millis();
-
-  // TAAK 1: Controleer of het tijd is om van richting te wisselen (elke 2000ms)
-  if (huidigeTijd - vorigeBewegingTijd >= BEWEEG_INTERVAL) {
-    vorigeBewegingTijd = huidigeTijd; // Reset de timer
-
-    if (gaNaarB) {
-      dxl.setGoalPosition(DXL_ID, POSITIE_B);
-    } else {
-      dxl.setGoalPosition(DXL_ID, POSITIE_A);
-    }
+  if (millis() - laatsteBerichtTijd < 1000) {
+    // SNELHEIDS LOGICA:
+    // inkomendeData.x is -100 tot 100.
+    // We delen door 100.0 om een factor (-1.0 tot 1.0) te krijgen.
+    // Vermenigvuldig met maxSpeed voor de stapgrootte per loop.
     
-    gaNaarB = !gaNaarB; // Draai de richting om voor de volgende keer
+    float stap = (float)inkomendeData.x / 100.0 * inkomendeData.maxSpeed;
+    
+    // Update de positie
+    virtueleDoelPositie += stap;
+    
+    // Blijf binnen de hardware limieten
+    virtueleDoelPositie = constrain(virtueleDoelPositie, SERVO_MIN, SERVO_MAX);
+    
+    // Stuur naar de servo
+    dxl.setGoalPosition(DXL_ID, (int)virtueleDoelPositie);
   }
-
-  // TAAK 2: Controleer of het tijd is om de positie uit te lezen (elke 50ms)
-  if (huidigeTijd - vorigeLeesTijd >= LEES_INTERVAL) {
-    vorigeLeesTijd = huidigeTijd; // Reset de timer
-
-    int positie = dxl.getPresentPosition(DXL_ID);
-
-    // Omdat we heel snel printen, gebruiken we een nette opmaak:
-    Serial.print("Doelpositie: ");
-    Serial.print(gaNaarB ? POSITIE_A : POSITIE_B); // Print waar hij op dit moment naartoe probeert te gaan
-    Serial.print(" | Actuele Positie: ");
-    Serial.println(positie);
-  }
+  
+  delay(10); // 100Hz verversing voor zeer soepele beweging
 }
