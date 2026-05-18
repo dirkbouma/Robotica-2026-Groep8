@@ -1,89 +1,149 @@
 #include <Arduino.h>
-#include <Dynamixel2Arduino.h>
+#include <SPI.h>
+#include <TFT_eSPI.h>
+#include <WiFi.h>
+#include <esp_now.h>
 
-// --- ESP32 HARDWARE PINNEN ---
-#define DXL_TX_PIN   17
-#define DXL_RX_PIN   16
+TFT_eSPI tft = TFT_eSPI();
 
-// --- 74HC125 PINNEN ---
-#define TX_ENABLE_PIN 4  
-#define RX_ENABLE_PIN 5  
-#define DXL_DIR_PIN  RX_ENABLE_PIN
+// --- ESP-NOW ---
+uint8_t robotAddress[] = {0xCC, 0xDB, 0xA7, 0x98, 0x82, 0x84}; // VUL JE EIGEN MAC ADRES IN
 
-// --- DYNAMIXEL INSTELLINGEN ---
-const uint8_t DXL_ID = 254;               // Zorg dat dit jouw correcte ID is!
-const float DXL_PROTOCOL_VERSION = 1.0; 
-const uint32_t BAUDRATE = 1000000;      
+typedef struct struct_message {
+  int x;
+  int y;
+  float maxSpeed; // Nieuw: De ingestelde snelheid van de slider
+} struct_message;
 
-HardwareSerial DxlSerial(2);
-Dynamixel2Arduino dxl(DxlSerial, DXL_DIR_PIN);
+struct_message actueleData;
+esp_now_peer_info_t peerInfo;
+String espNowStatus = "STARTING...";
 
-// --- TIMERS VOOR MULTITASKING ---
-unsigned long vorigeBewegingTijd = 0;
-const unsigned long BEWEEG_INTERVAL = 2000; // Wissel elke 2 seconden van richting
+// --- Pinnen ---
+const int JOY_POWER_PIN = 32;
+const int JOY_X_PIN = 34; 
+const int JOY_Y_PIN = 35; 
 
-unsigned long vorigeLeesTijd = 0;
-const unsigned long LEES_INTERVAL = 50;     // Lees elke 50 milliseconden (20x per seconde)
+// --- Kleuren & UI ---
+#define ST_DARK   0x0841 
+#define ST_LIME   0xDEFB 
+#define ST_RED    0xF800 
+enum Scherm { AUTO, MANUAL, DEBUG };
+Scherm huidigScherm = MANUAL;
 
-// --- POSITIE INSTELLINGEN ---
-const int POSITIE_A = 300;
-const int POSITIE_B = 700;
-bool gaNaarB = true; // Houdt bij welke kant we op gaan
+int joyX_mapped, joyY_mapped;
+float speedSetting = 5.0; // Standaard snelheidswaarde
+unsigned long vorigeMillis = 0;
+const int menuBreedte = 100;
 
-// =========================================================================
-// DE SOFTWARE INVERTER (Hardware Interrupt)
-// =========================================================================
-void IRAM_ATTR flipDirectionPin() {
-  digitalWrite(TX_ENABLE_PIN, !digitalRead(RX_ENABLE_PIN));
+// --- Prototypes ---
+void tekenMenu();
+void tekenSchermManual();
+void checkTouch();
+int berekenJoystick(int raw);
+
+void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
+  espNowStatus = (status == ESP_NOW_SEND_SUCCESS) ? "OK" : "FAIL";
 }
-// =========================================================================
 
 void setup() {
   Serial.begin(115200);
-  delay(1000);
-  Serial.println("\n--- Start Sweep & Uitlees Test ---");
+  analogSetAttenuation(ADC_11db);
+  pinMode(JOY_POWER_PIN, OUTPUT);
+  digitalWrite(JOY_POWER_PIN, HIGH);
 
-  pinMode(TX_ENABLE_PIN, OUTPUT);
-  attachInterrupt(digitalPinToInterrupt(RX_ENABLE_PIN), flipDirectionPin, CHANGE);
-  digitalWrite(TX_ENABLE_PIN, HIGH); 
+  tft.init();
+  tft.setRotation(1); 
+  tft.fillScreen(ST_DARK);
+  uint16_t calData[5] = { 275, 3620, 264, 3532, 1 }; 
+  tft.setTouch(calData);
 
-  DxlSerial.begin(BAUDRATE, SERIAL_8N1, DXL_RX_PIN, DXL_TX_PIN);
-  dxl.begin(BAUDRATE);
-  dxl.setPortProtocolVersion(DXL_PROTOCOL_VERSION);
-  
-  // BELANGRIJK: Om te kunnen bewegen, moeten we Torque aanzetten!
-  dxl.setOperatingMode(DXL_ID, OP_POSITION);
-  dxl.torqueOn(DXL_ID);
-
-  Serial.println("Klaar! Starten met bewegen en lezen...\n");
+  WiFi.mode(WIFI_STA);
+  if (esp_now_init() == ESP_OK) {
+    esp_now_register_send_cb(OnDataSent);
+    memcpy(peerInfo.peer_addr, robotAddress, 6);
+    peerInfo.channel = 0;  
+    peerInfo.encrypt = false;
+    esp_now_add_peer(&peerInfo);
+  }
+  tekenMenu();
 }
 
 void loop() {
-  unsigned long huidigeTijd = millis();
+  joyX_mapped = berekenJoystick(analogRead(JOY_X_PIN));
+  joyY_mapped = berekenJoystick(analogRead(JOY_Y_PIN));
 
-  // TAAK 1: Controleer of het tijd is om van richting te wisselen (elke 2000ms)
-  if (huidigeTijd - vorigeBewegingTijd >= BEWEEG_INTERVAL) {
-    vorigeBewegingTijd = huidigeTijd; // Reset de timer
+  checkTouch();
 
-    if (gaNaarB) {
-      dxl.setGoalPosition(DXL_ID, POSITIE_B);
-    } else {
-      dxl.setGoalPosition(DXL_ID, POSITIE_A);
-    }
+  if (millis() - vorigeMillis > 50) { // Iets snellere update voor snelheid (20Hz)
+    vorigeMillis = millis();
     
-    gaNaarB = !gaNaarB; // Draai de richting om voor de volgende keer
+    if (huidigScherm == MANUAL) {
+      actueleData.x = joyX_mapped;
+      actueleData.y = joyY_mapped;
+      actueleData.maxSpeed = speedSetting;
+      esp_now_send(robotAddress, (uint8_t *) &actueleData, sizeof(actueleData));
+      tekenSchermManual();
+    }
   }
+}
 
-  // TAAK 2: Controleer of het tijd is om de positie uit te lezen (elke 50ms)
-  if (huidigeTijd - vorigeLeesTijd >= LEES_INTERVAL) {
-    vorigeLeesTijd = huidigeTijd; // Reset de timer
+int berekenJoystick(int raw) {
+  int center = 2048;
+  int deadzone = 200;
+  if (abs(raw - center) < deadzone) return 0;
+  int lineair = (raw >= center + deadzone) ? map(raw, center+deadzone, 4095, 0, 100) : map(raw, 0, center-deadzone, -100, 0);
+  float f = (float)lineair / 100.0;
+  return (int)((f * f * f) * 100.0); // Expo curve behouden voor precisie
+}
 
-    int positie = dxl.getPresentPosition(DXL_ID);
-
-    // Omdat we heel snel printen, gebruiken we een nette opmaak:
-    Serial.print("Doelpositie: ");
-    Serial.print(gaNaarB ? POSITIE_A : POSITIE_B); // Print waar hij op dit moment naartoe probeert te gaan
-    Serial.print(" | Actuele Positie: ");
-    Serial.println(positie);
+void checkTouch() {
+  uint16_t t_x, t_y;
+  if (tft.getTouch(&t_x, &t_y)) {
+    t_y = tft.height() - t_y; // Flip Y-as
+    if (t_x < menuBreedte) {
+      if (t_y < 106) huidigScherm = AUTO;
+      else if (t_y < 212) huidigScherm = MANUAL;
+      else huidigScherm = DEBUG;
+      tft.fillRect(menuBreedte, 0, 380, 320, ST_DARK); 
+      tekenMenu();
+    } else if (huidigScherm == MANUAL && t_x > 410) {
+      // Slider logica: bepaal de snelheidswaarde (0.5 tot 15.0)
+      speedSetting = (float)map(t_y, 260, 20, 5, 150) / 10.0;
+      speedSetting = constrain(speedSetting, 0.5, 15.0);
+    }
   }
+}
+
+void tekenMenu() {
+  tft.fillRect(0, 0, menuBreedte, 320, 0x1082); 
+  tft.drawFastVLine(menuBreedte - 1, 0, 320, ST_LIME);
+  tft.setTextSize(2);
+  tft.setTextColor(huidigScherm == AUTO ? ST_LIME : TFT_WHITE);
+  tft.setCursor(15, 45); tft.print("AUTO");
+  tft.setTextColor(huidigScherm == MANUAL ? ST_LIME : TFT_WHITE);
+  tft.setCursor(15, 151); tft.print("HAND");
+  tft.setTextColor(huidigScherm == DEBUG ? ST_LIME : TFT_WHITE);
+  tft.setCursor(15, 257); tft.print("DEBUG");
+}
+
+void tekenSchermManual() {
+  int boxX = menuBreedte + 40, boxY = 40, boxW = 220, boxH = 220;
+  int vX = map(joyX_mapped, -100, 100, boxX, boxX + boxW);
+  int vY = map(joyY_mapped, -100, 100, boxY, boxY + boxH);
+
+  tft.drawRect(boxX, boxY, boxW, boxH, TFT_WHITE);
+  tft.fillRect(boxX+1, boxY+1, boxW-2, boxH-2, ST_DARK);
+  tft.drawFastHLine(boxX, vY, boxW, ST_LIME); 
+  tft.drawFastVLine(vX, boxY, boxH, ST_LIME); 
+
+  // Slider visualisatie
+  int slX = 420, slY = 40, slH = 220;
+  tft.fillRect(slX, 0, 60, 320, ST_DARK); // Wis kolom
+  tft.fillRect(slX+15, slY, 10, slH, TFT_DARKGREY);
+  int knobY = map(speedSetting * 10, 5, 150, slY + slH, slY);
+  tft.fillRect(slX, knobY-10, 40, 20, ST_LIME);
+  tft.setTextColor(TFT_WHITE); tft.setTextSize(1);
+  tft.setCursor(slX-5, slY+slH+15); tft.print("SPEED:");
+  tft.setCursor(slX+5, slY+slH+30); tft.print(speedSetting, 1);
 }
