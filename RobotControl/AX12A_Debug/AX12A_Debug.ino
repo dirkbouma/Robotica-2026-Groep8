@@ -334,6 +334,90 @@ void cmd_status(uint8_t id) {
   }
 }
 
+void cmd_json_scan() {
+  Serial.print("{\"type\":\"scan\",\"found\":[");
+  bool first = true;
+  for (int id = 0; id <= 253; id++) {
+    sendPacket(id, INST_PING, NULL, 0);
+    uint8_t err;
+    int res = readPacket(rx_buffer, sizeof(rx_buffer), &err, 15);
+    if (res >= 0) {
+      if (!first) Serial.print(",");
+      Serial.print(id);
+      first = false;
+    }
+  }
+  Serial.println("]}");
+}
+
+void cmd_json_status(uint8_t id) {
+  // Volt
+  float volt = 0;
+  uint8_t p_volt[2] = {42, 1};
+  sendPacket(id, INST_READ_DATA, p_volt, 2);
+  uint8_t err;
+  if (readPacket(rx_buffer, sizeof(rx_buffer), &err) >= 0) {
+    volt = (float)rx_buffer[0] / 10.0f;
+  }
+
+  // Temp
+  int temp = 0;
+  uint8_t p_temp[2] = {43, 1};
+  sendPacket(id, INST_READ_DATA, p_temp, 2);
+  if (readPacket(rx_buffer, sizeof(rx_buffer), &err) >= 0) {
+    temp = rx_buffer[0];
+  }
+
+  // Load
+  int load_val = 0;
+  bool ccw = false;
+  uint8_t p_load[2] = {40, 2};
+  sendPacket(id, INST_READ_DATA, p_load, 2);
+  if (readPacket(rx_buffer, sizeof(rx_buffer), &err) == 2) {
+    uint16_t load = rx_buffer[0] | (rx_buffer[1] << 8);
+    ccw = (load & 0x400) > 0;
+    load_val = load & 0x3FF;
+  }
+
+  // Pos
+  int pos_val = 0;
+  uint8_t p_pos[2] = {36, 2};
+  sendPacket(id, INST_READ_DATA, p_pos, 2);
+  if (readPacket(rx_buffer, sizeof(rx_buffer), &err) == 2) {
+    pos_val = rx_buffer[0] | (rx_buffer[1] << 8);
+  }
+
+  Serial.printf("{\"type\":\"status\",\"id\":%d,\"voltage\":%.1f,\"temp\":%d,\"load\":%d,\"load_dir\":\"%s\",\"pos\":%d}\n",
+                id, volt, temp, load_val, ccw ? "CCW" : "CW", pos_val);
+}
+
+void cmd_dump(uint8_t id) {
+  Serial.printf("{\"type\":\"dump\",\"id\":%d,\"eeprom\":[", id);
+  // Read EEPROM 0-23
+  uint8_t p_eeprom[2] = {0, 24};
+  sendPacket(id, INST_READ_DATA, p_eeprom, 2);
+  uint8_t err;
+  int res = readPacket(rx_buffer, sizeof(rx_buffer), &err);
+  if (res == 24) {
+    for (int i=0; i<24; i++) {
+      Serial.print(rx_buffer[i]);
+      if (i < 23) Serial.print(",");
+    }
+  }
+  Serial.print("],\"ram\":[");
+  // Read RAM 24-49 (26 bytes)
+  uint8_t p_ram[2] = {24, 26};
+  sendPacket(id, INST_READ_DATA, p_ram, 2);
+  res = readPacket(rx_buffer, sizeof(rx_buffer), &err);
+  if (res == 26) {
+    for (int i=0; i<26; i++) {
+      Serial.print(rx_buffer[i]);
+      if (i < 25) Serial.print(",");
+    }
+  }
+  Serial.println("]}");
+}
+
 // --- PARSER ---
 void parseCommand(char *cmdLine) {
   char *cmd = strtok(cmdLine, " ");
@@ -351,6 +435,9 @@ void parseCommand(char *cmdLine) {
     Serial.println("  led <id> <1/0>             - Toggle LED");
     Serial.println("  status <id>                - Read volt, temp, load, pos");
     Serial.println("  reset <id>                 - Factory reset servo");
+    Serial.println("  jscan                      - Scan returning JSON");
+    Serial.println("  jstatus <id>               - Status returning JSON");
+    Serial.println("  dump <id>                  - Read EEPROM/RAM as JSON");
   } else if (strcmp(cmd, "ping") == 0) {
     int id = atoi(strtok(NULL, " "));
     cmd_ping((uint8_t)id);
@@ -386,6 +473,14 @@ void parseCommand(char *cmdLine) {
   } else if (strcmp(cmd, "reset") == 0) {
     int id = atoi(strtok(NULL, " "));
     cmd_reset((uint8_t)id);
+  } else if (strcmp(cmd, "jscan") == 0) {
+    cmd_json_scan();
+  } else if (strcmp(cmd, "jstatus") == 0) {
+    int id = atoi(strtok(NULL, " "));
+    cmd_json_status((uint8_t)id);
+  } else if (strcmp(cmd, "dump") == 0) {
+    int id = atoi(strtok(NULL, " "));
+    cmd_dump((uint8_t)id);
   } else {
     Serial.println("Unknown command. Type 'help'.");
   }
