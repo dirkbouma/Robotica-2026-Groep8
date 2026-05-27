@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AX-12A Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <h2>AX-12A<span>Control</span></h2>
+            </div>
+            
+            <div class="panel">
+                <h3>Connection</h3>
+                <button id="btn-scan" class="btn primary">Scan Servos</button>
+                <div class="status-indicator">
+                    <span class="dot" id="ws-status-dot"></span>
+                    <span id="ws-status-text">Disconnected</span>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h3>Detected Servos</h3>
+                <ul id="servo-list" class="servo-list">
+                    <li class="empty-msg">No servos found.</li>
+                </ul>
+            </div>
+            
+            <div class="panel">
+                <h3>Global Controls</h3>
+                <button id="btn-torque-all-off" class="btn danger">Torque All OFF</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1 id="selected-servo-title">Select a Servo</h1>
+            </header>
+
+            <div class="content-grid" id="main-grid" style="display: none;">
+                <!-- Telemetry Panel -->
+                <section class="card glass">
+                    <h2>Telemetry</h2>
+                    <div class="telemetry-grid">
+                        <div class="metric">
+                            <span class="label">Position</span>
+                            <div class="value"><span id="tel-pos">0</span></div>
+                        </div>
+                        <div class="metric">
+                            <span class="label">Load</span>
+                            <div class="value"><span id="tel-load">0</span>%</div>
+                        </div>
+                        <div class="metric">
+                            <span class="label">Voltage</span>
+                            <div class="value"><span id="tel-volt">0</span>V</div>
+                        </div>
+                        <div class="metric">
+                            <span class="label">Temp</span>
+                            <div class="value"><span id="tel-temp">0</span>°C</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick Controls -->
+                <section class="card glass">
+                    <h2>Quick Controls</h2>
+                    <div class="control-group">
+                        <label for="range-position">Goal Position (0 - 1023)</label>
+                        <div class="slider-container">
+                            <input type="range" id="range-position" min="0" max="1023" value="512">
+                            <span id="val-position">512</span>
+                        </div>
+                    </div>
+                    <div class="control-group row">
+                        <span class="label">Torque Enable</span>
+                        <label class="switch">
+                            <input type="checkbox" id="toggle-torque">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- Full Register Table -->
+                <section class="card glass full-width">
+                    <div class="card-header">
+                        <h2>Control Table (EEPROM / RAM)</h2>
+                        <button id="btn-refresh-regs" class="btn secondary small">Refresh</button>
+                    </div>
+                    <div class="table-container">
+                        <table id="register-table">
+                            <thead>
+                                <tr>
+                                    <th>Address</th>
+                                    <th>Name</th>
+                                    <th>Value</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Rows injected by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

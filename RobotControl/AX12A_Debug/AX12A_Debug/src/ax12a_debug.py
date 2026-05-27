@@ -48,6 +48,9 @@ class AX12A_Debug(cmd.Cmd):
 
     def __init__(self):
         super().__init__()
+        self.debug_mode = False
+        self.dir_tx_state = DIR_TX
+        self.dir_rx_state = DIR_RX
         try:
             self.ser = serial.Serial(SERIAL_PORT, BAUDRATE, timeout=0)
             print(f"Opened {SERIAL_PORT} at {BAUDRATE} baud.")
@@ -58,13 +61,13 @@ class AX12A_Debug(cmd.Cmd):
 
     def set_tx_mode(self):
         if dir_output is not None:
-            dir_output.value = DIR_TX
+            dir_output.value = self.dir_tx_state
 
     def set_rx_mode(self):
         if self.ser:
             self.ser.flush() # Wait for all bytes to be transmitted
         if dir_output is not None:
-            dir_output.value = DIR_RX
+            dir_output.value = self.dir_rx_state
 
     def send_packet(self, dxl_id, instruction, params=None):
         if params is None:
@@ -100,6 +103,8 @@ class AX12A_Debug(cmd.Cmd):
         while (time.time() - start) < timeout:
             if self.ser.in_waiting > 0:
                 b = self.ser.read()[0]
+                if self.debug_mode:
+                    print(f"DEBUG RX: 0x{b:02X}")
                 
                 if state == 0:
                     if b == 0xFF: state = 1
@@ -334,6 +339,18 @@ class AX12A_Debug(cmd.Cmd):
         self.send_packet(dxl_id, INST_RESET)
         self.read_packet()
         print("Reset command sent.")
+
+    def do_debug(self, arg):
+        """debug : Toggle debug mode to print raw received bytes"""
+        self.debug_mode = not self.debug_mode
+        print(f"Debug mode is now {'ON' if self.debug_mode else 'OFF'}.")
+
+    def do_flipdir(self, arg):
+        """flipdir : Swap the logic for DIR_TX and DIR_RX (High/Low)"""
+        self.dir_tx_state = not self.dir_tx_state
+        self.dir_rx_state = not self.dir_rx_state
+        print(f"Direction logic flipped. TX is now {'HIGH' if self.dir_tx_state else 'LOW'}, RX is {'HIGH' if self.dir_rx_state else 'LOW'}.")
+        self.set_rx_mode() # Apply new RX state
 
     def do_exit(self, arg):
         """exit : Exit the debugger"""
