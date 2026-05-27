@@ -1,37 +1,40 @@
 import time
 import platform
 import logging
+import struct
+try:
+    import fcntl
+except ImportError:
+    fcntl = None
 from .ax12a_registers import CONTROL_TABLE
 
 logger = logging.getLogger(__name__)
 
 # Fallback for Windows/Mac development
-IS_RPI = platform.system() == "Linux" and ("arm" in platform.machine() or "aarch64" in platform.machine())
+IS_LINUX = platform.system() == "Linux"
 
 # Constants for Dynamixel Protocol 1.0 (used by AX-12A)
 PROTOCOL_VERSION = 1.0
 BAUDRATE = 1000000
 
-# Defaults for Raspberry Pi
-if IS_RPI:
-    DEVICENAME = '/dev/ttyAMA0' # or '/dev/serial0'
-    DIR_PIN = 18 # User can change this if needed
+# RS485 Constants for Linux ioctl
+TIOCSRS485 = 0x542F
+SER_RS485_ENABLED = 0x00000001
+SER_RS485_RTS_ON_SEND = 0x00000002
+
+if IS_LINUX:
+    DEVICENAME = '/dev/ttyAMA0'
 else:
     DEVICENAME = 'COM1'
-    DIR_PIN = None
 
 try:
-    if IS_RPI:
-        import gpiozero
-        from dynamixel_sdk import PortHandler, PacketHandler, COMM_SUCCESS
-        # Initialize DIR pin
-        dir_pin = gpiozero.DigitalOutputDevice(DIR_PIN)
-        dir_pin.off() # RX mode by default
+    if IS_LINUX:
+        from dynamixel_sdk import PortHandler, PacketHandler
     else:
-        raise ImportError("Not on RPi")
+        raise ImportError("Not on Linux")
 except ImportError:
-    IS_RPI = False
-    logger.warning("Running in MOCK mode (dynamixel_sdk or gpiozero not found or not on RPi)")
+    IS_LINUX = False
+    logger.warning("Running in MOCK mode (dynamixel_sdk not found or not on Linux)")
 
 class MockPortHandler:
     def openPort(self): return True
@@ -42,7 +45,7 @@ class MockPacketHandler:
     def __init__(self):
         # Mock RAM
         self.mock_memory = {}
-        for i in range(1, 10):
+        for i in range(1, 4):
             self.mock_memory[i] = {k: 0 for k in CONTROL_TABLE.keys()}
             self.mock_memory[i]["Present Position"] = 512
             self.mock_memory[i]["Present Voltage"] = 120
@@ -89,41 +92,39 @@ class MockPacketHandler:
 
 class ServoController:
     def __init__(self):
-        if IS_RPI:
+        if IS_LINUX:
             self.portHandler = PortHandler(DEVICENAME)
             self.packetHandler = PacketHandler(PROTOCOL_VERSION)
             if self.portHandler.openPort():
-                logger.info("Succeeded to open the port")
+                logger.info(f"Succeeded to open the port {DEVICENAME}")
             else:
-                logger.error("Failed to open the port")
+                logger.error(f"Failed to open the port {DEVICENAME}")
             
             if self.portHandler.setBaudRate(BAUDRATE):
                 logger.info("Succeeded to change the baudrate")
             else:
                 logger.error("Failed to change the baudrate")
+
+            # ENABLE RS485 hardware toggling via ioctl
+            try:
+                if fcntl:
+                    rs485_flags = (SER_RS485_ENABLED | SER_RS485_RTS_ON_SEND)
+                    buf = struct.pack('IIIIIIII', rs485_flags, 0, 0, 0, 0, 0, 0, 0)
+                    fcntl.ioctl(self.portHandler.ser.fileno(), TIOCSRS485, buf)
+                    logger.info("RS485 enabled successfully via ioctl")
+                else:
+                    logger.warning("fcntl not available, skipping RS485 setup")
+            except Exception as e:
+                logger.error(f"RS485 setup failed: {e}")
         else:
             self.portHandler = MockPortHandler()
             self.packetHandler = MockPacketHandler()
 
-    def set_tx_mode(self):
-        if IS_RPI: dir_pin.on()
-        
-    def set_rx_mode(self):
-        if IS_RPI: dir_pin.off()
-
     def scan(self):
         found_ids = []
-        for i in range(1, 253):
-            self.set_tx_mode()
-            # The ping sends packet and then expects a response.
-            # dynamixel_sdk handles tx/rx automatically, but with a half duplex level shifter we need to toggle DIR.
-            # NOTE: For dynamixel_sdk with half-duplex UART on Pi, standard PortHandler might not toggle DIR fast enough.
-            # However, dynamixel_sdk doesn't have hooks for DIR toggle per byte. 
-            # Often, hardware auto-direction (like a 74LS241 or 74HC126 with TX acting as DIR) is used, or a custom PortHandler.
-            # Assuming custom handling or slow enough response.
+        for i in range(254):
             model_number, dxl_comm_result, dxl_error = self.packetHandler.ping(self.portHandler, i)
-            self.set_rx_mode()
-            if dxl_comm_result == 0:
+            if dxl_comm_result == 0 and dxl_error == 0:
                 found_ids.append(i)
         return found_ids
 
@@ -131,29 +132,26 @@ class ServoController:
         reg = CONTROL_TABLE.get(reg_name)
         if not reg: return None
         
-        self.set_tx_mode()
-        # Hacky workaround: setting rx mode immediately after tx might be too fast/slow.
-        # Ideally, we use an auto-dir level shifter or modifying the C-level dynamixel_sdk.
         if reg["size"] == 1:
             data, dxl_comm_result, dxl_error = self.packetHandler.read1ByteTxRx(self.portHandler, dxl_id, reg["address"])
         else:
             data, dxl_comm_result, dxl_error = self.packetHandler.read2ByteTxRx(self.portHandler, dxl_id, reg["address"])
-        self.set_rx_mode()
         
-        return data
+        # Only return data if comm success
+        if dxl_comm_result == 0 and dxl_error == 0:
+            return data
+        return None
 
     def write_register(self, dxl_id, reg_name, value):
         reg = CONTROL_TABLE.get(reg_name)
         if not reg: return False
         
-        self.set_tx_mode()
         if reg["size"] == 1:
             dxl_comm_result, dxl_error = self.packetHandler.write1ByteTxRx(self.portHandler, dxl_id, reg["address"], value)
         else:
             dxl_comm_result, dxl_error = self.packetHandler.write2ByteTxRx(self.portHandler, dxl_id, reg["address"], value)
-        self.set_rx_mode()
         
-        return dxl_comm_result == 0
+        return dxl_comm_result == 0 and dxl_error == 0
 
     def get_all_registers(self, dxl_id):
         data = {}

@@ -2,5 +2,4 @@ fastapi
 uvicorn
 pydantic
 dynamixel_sdk
-gpiozero
 websockets
