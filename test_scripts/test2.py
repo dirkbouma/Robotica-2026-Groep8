@@ -1,0 +1,363 @@
+#!/usr/bin/env python3
+
+import cmd
+import struct
+import fcntl
+
+from dynamixel_sdk import PortHandler, PacketHandler
+
+# ============================================
+# CONFIG
+# ============================================
+
+DEVICENAME = "/dev/ttyAMA0"
+BAUDRATE = 1000000
+PROTOCOL_VERSION = 1.0
+
+# ============================================
+# RS485 CONFIG
+# ============================================
+
+TIOCSRS485 = 0x542F
+
+SER_RS485_ENABLED = 0x00000001
+SER_RS485_RTS_ON_SEND = 0x00000002
+
+# ============================================
+# AX12 REGISTERS
+# ============================================
+
+ADDR_TORQUE_ENABLE = 24
+ADDR_LED = 25
+ADDR_GOAL_POSITION = 30
+ADDR_MOVING_SPEED = 32
+ADDR_PRESENT_POSITION = 36
+ADDR_PRESENT_LOAD = 40
+ADDR_PRESENT_VOLTAGE = 42
+ADDR_PRESENT_TEMPERATURE = 43
+
+TORQUE_ENABLE = 1
+TORQUE_DISABLE = 0
+
+
+class AX12Debugger(cmd.Cmd):
+
+    intro = """
+===================================
+ AX-12A SDK Debugger
+===================================
+Type help or ? for commands.
+"""
+
+    prompt = "> "
+
+    # ============================================
+
+    def __init__(self):
+        super().__init__()
+
+        self.port_handler = PortHandler(DEVICENAME)
+        self.packet_handler = PacketHandler(PROTOCOL_VERSION)
+
+        #
+        # OPEN PORT
+        #
+        if not self.port_handler.openPort():
+            raise RuntimeError(f"Failed to open {DEVICENAME}")
+
+        #
+        # SET BAUDRATE
+        #
+        if not self.port_handler.setBaudRate(BAUDRATE):
+            raise RuntimeError("Failed to set baudrate")
+
+        #
+        # ENABLE RS485
+        #
+        try:
+
+            rs485_flags = (
+                SER_RS485_ENABLED |
+                SER_RS485_RTS_ON_SEND
+            )
+
+            buf = struct.pack(
+                'IIIIIIII',
+                rs485_flags,
+                0, 0, 0, 0, 0, 0, 0
+            )
+
+            fcntl.ioctl(
+                self.port_handler.ser.fileno(),
+                TIOCSRS485,
+                buf
+            )
+
+            print("RS485 enabled")
+
+        except Exception as e:
+            print("RS485 setup failed:", e)
+
+        print(f"Opened {DEVICENAME} @ {BAUDRATE}")
+
+    # ============================================
+
+    def check_error(self, comm_result, error):
+
+        if comm_result != 0:
+            print(self.packet_handler.getTxRxResult(comm_result))
+            return False
+
+        if error != 0:
+            print(self.packet_handler.getRxPacketError(error))
+            return False
+
+        return True
+
+    # ============================================
+    # PING
+    # ============================================
+
+    def do_ping(self, arg):
+        """ping <id>"""
+
+        dxl_id = int(arg)
+
+        model, comm_result, error = self.packet_handler.ping(
+            self.port_handler,
+            dxl_id
+        )
+
+        if self.check_error(comm_result, error):
+            print(f"Ping OK")
+            print(f"ID: {dxl_id}")
+            print(f"Model: {model}")
+
+    # ============================================
+    # SCAN
+    # ============================================
+
+    def do_scan(self, arg):
+
+        print("Scanning...")
+
+        for dxl_id in range(254):
+
+            model, comm_result, error = self.packet_handler.ping(
+                self.port_handler,
+                dxl_id
+            )
+
+            if comm_result == 0 and error == 0:
+                print(f"Found ID {dxl_id} Model {model}")
+
+    # ============================================
+    # READ
+    # ============================================
+
+    def do_read(self, arg):
+        """read <id> <addr> <len>"""
+
+        dxl_id, addr, length = map(int, arg.split())
+
+        if length == 1:
+
+            value, comm_result, error = \
+                self.packet_handler.read1ByteTxRx(
+                    self.port_handler,
+                    dxl_id,
+                    addr
+                )
+
+        elif length == 2:
+
+            value, comm_result, error = \
+                self.packet_handler.read2ByteTxRx(
+                    self.port_handler,
+                    dxl_id,
+                    addr
+                )
+
+        elif length == 4:
+
+            value, comm_result, error = \
+                self.packet_handler.read4ByteTxRx(
+                    self.port_handler,
+                    dxl_id,
+                    addr
+                )
+
+        else:
+            print("Length must be 1,2,4")
+            return
+
+        if self.check_error(comm_result, error):
+            print(f"Value: {value}")
+
+    # ============================================
+    # WRITE
+    # ============================================
+
+    def do_write(self, arg):
+        """write <id> <addr> <value> <len>"""
+
+        dxl_id, addr, value, length = map(int, arg.split())
+
+        if length == 1:
+
+            comm_result, error = \
+                self.packet_handler.write1ByteTxRx(
+                    self.port_handler,
+                    dxl_id,
+                    addr,
+                    value
+                )
+
+        elif length == 2:
+
+            comm_result, error = \
+                self.packet_handler.write2ByteTxRx(
+                    self.port_handler,
+                    dxl_id,
+                    addr,
+                    value
+                )
+
+        elif length == 4:
+
+            comm_result, error = \
+                self.packet_handler.write4ByteTxRx(
+                    self.port_handler,
+                    dxl_id,
+                    addr,
+                    value
+                )
+
+        else:
+            print("Length must be 1,2,4")
+            return
+
+        if self.check_error(comm_result, error):
+            print("Write OK")
+
+    # ============================================
+    # MOVE
+    # ============================================
+
+    def do_move(self, arg):
+        """move <id> <position> <speed>"""
+
+        dxl_id, position, speed = map(int, arg.split())
+
+        #
+        # SPEED
+        #
+        comm_result, error = \
+            self.packet_handler.write2ByteTxRx(
+                self.port_handler,
+                dxl_id,
+                ADDR_MOVING_SPEED,
+                speed
+            )
+
+        if not self.check_error(comm_result, error):
+            return
+
+        #
+        # POSITION
+        #
+        comm_result, error = \
+            self.packet_handler.write2ByteTxRx(
+                self.port_handler,
+                dxl_id,
+                ADDR_GOAL_POSITION,
+                position
+            )
+
+        if self.check_error(comm_result, error):
+
+            print(
+                f"Moving ID {dxl_id} "
+                f"to {position} "
+                f"speed {speed}"
+            )
+
+    # ============================================
+    # LED
+    # ============================================
+
+    def do_led(self, arg):
+        """led <id> <0/1>"""
+
+        dxl_id, state = map(int, arg.split())
+
+        comm_result, error = \
+            self.packet_handler.write1ByteTxRx(
+                self.port_handler,
+                dxl_id,
+                ADDR_LED,
+                state
+            )
+
+        if self.check_error(comm_result, error):
+            print("LED updated")
+
+    # ============================================
+    # STATUS
+    # ============================================
+
+    def do_status(self, arg):
+        """status <id>"""
+
+        dxl_id = int(arg)
+
+        voltage, _, _ = \
+            self.packet_handler.read1ByteTxRx(
+                self.port_handler,
+                dxl_id,
+                ADDR_PRESENT_VOLTAGE
+            )
+
+        temperature, _, _ = \
+            self.packet_handler.read1ByteTxRx(
+                self.port_handler,
+                dxl_id,
+                ADDR_PRESENT_TEMPERATURE
+            )
+
+        load, _, _ = \
+            self.packet_handler.read2ByteTxRx(
+                self.port_handler,
+                dxl_id,
+                ADDR_PRESENT_LOAD
+            )
+
+        position, _, _ = \
+            self.packet_handler.read2ByteTxRx(
+                self.port_handler,
+                dxl_id,
+                ADDR_PRESENT_POSITION
+            )
+
+        print(f"Voltage: {voltage / 10.0:.1f}V")
+        print(f"Temperature: {temperature}C")
+        print(f"Load: {load}")
+        print(f"Position: {position}")
+
+    # ============================================
+
+    def do_exit(self, arg):
+        self.port_handler.closePort()
+        return True
+
+    def do_quit(self, arg):
+        return self.do_exit(arg)
+
+    def do_EOF(self, arg):
+        print()
+        return self.do_exit(arg)
+
+
+if __name__ == "__main__":
+
+    AX12Debugger().cmdloop()
