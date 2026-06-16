@@ -3,18 +3,17 @@
 ROS2 Node: Aardbeidetectie via reCamera RTSP-stream
 =====================================================
 Publiceert:
-  /aardbeien/detecties          → std_msgs/String         (JSON-array)
-  /aardbeien/rijp               → geometry_msgs/PoseArray (rijpe bessen)
-  /aardbeien/onrijp             → geometry_msgs/PoseArray (onrijpe bessen)
-  /aardbeien/frame              → sensor_msgs/Image        (geannoteerd frame)
-  /aardbeien/masker_rood        → sensor_msgs/Image
-  /aardbeien/masker_onrijp      → sensor_msgs/Image
+  /aardbeien/detecties      → std_msgs/String         (JSON-array)
+  /aardbeien/rijp           → geometry_msgs/PoseArray (rijpe bessen)
+  /aardbeien/onrijp         → geometry_msgs/PoseArray (onrijpe bessen)
+  /aardbeien/frame          → sensor_msgs/Image        (geannoteerd frame)
+  /aardbeien/masker_rood    → sensor_msgs/Image
+  /aardbeien/masker_onrijp  → sensor_msgs/Image
 
 Diensten:
-  /aardbeien/set_debug          → std_srvs/SetBool
-  /aardbeien/set_target_fps     → rcl_interfaces/srv/SetParameters (via param)
+  /aardbeien/set_debug      → std_srvs/SetBool
 
-Parameters (declareerbaar via ros2 param):
+Parameters (declareerbaar via ros2 param / YAML):
   recamera_ip        (string,  default "192.168.42.1")
   recamera_user      (string,  default "admin")
   recamera_pass      (string,  default "admin")
@@ -23,18 +22,18 @@ Parameters (declareerbaar via ros2 param):
   stream_naar_pi2    (bool,    default False)
   pi2_ip             (string,  default "192.168.1.100")
   pi2_port           (int,     default 5000)
+  legacy_udp         (bool,    default False)
   debug              (bool,    default False)
   debug_schijf       (bool,    default False)
 
 Gebruik:
-  ros2 run <package> strawberry_detection_node
-  ros2 run <package> strawberry_detection_node --ros-args \
-      -p recamera_ip:=192.168.42.1 -p target_fps:=15
+  ros2 run aardbeien_detectie detectie_node
+  ros2 run aardbeien_detectie detectie_node --ros-args \
+      -p recamera_ip:=192.168.42.1 -p stream_naar_pi2:=true -p pi2_ip:=192.168.1.50
 """
 
 import json
 import math
-import os
 import socket
 import subprocess
 import threading
@@ -95,10 +94,10 @@ DIEPTE_MAX_MM     = 1500
 # === BEWEGINGSINSTELLINGEN ==================================
 # ============================================================
 
-SCHIJF_MIDDELPUNT  = (427, 240)
-MIN_HOEK_DELTA     = 0.8
-MIN_RADIUS_SCHIJF  = 30
-POSITION_GRID      = 40
+SCHIJF_MIDDELPUNT = (427, 240)
+MIN_HOEK_DELTA    = 0.8
+MIN_RADIUS_SCHIJF = 30
+POSITION_GRID     = 40
 
 # ============================================================
 # === HSV-DREMPELS ===========================================
@@ -224,6 +223,7 @@ class RTSPStream:
             self.reconnect_count = 0
 
     def read(self, last_seen_id=None, timeout=0.1):
+        """Blokkeert maximaal `timeout` seconden tot een nieuw frame beschikbaar is."""
         if last_seen_id is not None:
             with self.lock:
                 current = self.frame_id
@@ -250,7 +250,13 @@ class RTSPStream:
 # ============================================================
 
 class FrameStreamer:
-    def __init__(self, ip, port, w, h, fps, ffmpeg_path):
+    """
+    Stuurt geannoteerde frames via FFmpeg als UDP/mpegts naar Pi 2 (display).
+    Pi 2 ontvangt deze met de display_node (pi2_display_node.py).
+    """
+
+    def __init__(self, ip: str, port: int, w: int, h: int,
+                 fps: int, ffmpeg_path: str):
         self.ip          = ip
         self.port        = port
         self.w           = w
@@ -279,7 +285,7 @@ class FrameStreamer:
             cmd, stdin=subprocess.PIPE, stderr=subprocess.DEVNULL, bufsize=0
         )
 
-    def stuur_frame(self, frame):
+    def stuur_frame(self, frame: np.ndarray):
         if self._proc is None or self._proc.poll() is not None:
             self.start()
         try:
@@ -378,7 +384,9 @@ def detecteer_aardbeien(masker, rijp: bool, debug: bool = False):
 
         (cx, cy), radius = cv2.minEnclosingCircle(contour)
         r_int = int(radius)
-        z_mm, z_methode = schat_diepte_mm(r_int) if rijp else (float(TAFEL_Z_MM), "tafel")
+        z_mm, z_methode = (
+            schat_diepte_mm(r_int) if rijp else (float(TAFEL_Z_MM), "tafel")
+        )
 
         if debug:
             print(f"[{label}] ✓ area={area:.0f}, AR={ar:.2f}, "
@@ -459,12 +467,11 @@ def teken_detecties(frame, detecties, richtingen):
 
 
 def detectie_naar_pose(d) -> Pose:
-    """Zet een detectie-dict om naar een geometry_msgs/Pose.
-
-    Conventie:
-      position.x = cx (pixels, horizontaal)
-      position.y = cy (pixels, verticaal)
-      position.z = z_mm (geschatte afstand in mm)
+    """
+    Zet een detectie-dict om naar een geometry_msgs/Pose.
+      position.x  = cx  (pixels, horizontaal)
+      position.y  = cy  (pixels, verticaal)
+      position.z  = z_mm (geschatte afstand in mm)
       orientation = identity quaternion
     """
     pose = Pose()
@@ -476,15 +483,23 @@ def detectie_naar_pose(d) -> Pose:
 
 
 # ============================================================
-# === ROS2 NODE ==============================================
+# === ROS2 NODE — PI 1 (detectie + stream) ===================
 # ============================================================
 
 class AardbeiDetectieNode(Node):
+    """
+    Hoofdnode op Pi 1.
+    - Leest RTSP-stream van de reCamera op de grijper.
+    - Voert aardbeidetectie uit.
+    - Publiceert ROS2-topics (detecties, maskers, geannoteerd frame).
+    - Stuurt geannoteerd frame optioneel via UDP/mpegts naar Pi 2 (display).
+    - Stuurt optioneel legacy UDP-berichten naar een ROS1-bridge op poort 5005.
+    """
 
     def __init__(self):
         super().__init__("aardbeien_detectie")
 
-        # --- Parameters declareren ---
+        # ---- Parameters declareren ----
         self.declare_parameter("recamera_ip",     "192.168.42.1")
         self.declare_parameter("recamera_user",   "admin")
         self.declare_parameter("recamera_pass",   "admin")
@@ -493,60 +508,53 @@ class AardbeiDetectieNode(Node):
         self.declare_parameter("stream_naar_pi2", False)
         self.declare_parameter("pi2_ip",          "192.168.1.100")
         self.declare_parameter("pi2_port",        5000)
+        self.declare_parameter("legacy_udp",      False)   # UDP naar poort 5005
         self.declare_parameter("debug",           False)
         self.declare_parameter("debug_schijf",    False)
 
         self._lees_params()
         self.add_on_set_parameters_callback(self._on_param_change)
 
-        # --- State ---
-        self._bridge              = CvBridge()
-        self._vorige_posities:    dict = {}
+        # ---- State ----
+        self._bridge               = CvBridge()
+        self._vorige_posities:     dict = {}
         self._verstuurde_posities: dict = {}
-        self._stream              = None
-        self._streamer            = None
-        self._laatste_frame_id    = None
+        self._stream:  RTSPStream   | None = None
+        self._streamer: FrameStreamer | None = None
+        self._sock:    socket.socket | None = None
+        self._verwerkings_thread: threading.Thread | None = None
+        self._stop_event = threading.Event()
 
-        # --- QoS: best-effort voor beeldstromen, reliable voor detecties ---
+        # ---- QoS ----
         qos_img = QoSProfile(depth=1, reliability=ReliabilityPolicy.BEST_EFFORT)
         qos_rel = QoSProfile(depth=10)
 
-        # --- Publishers ---
-        self._pub_detecties = self.create_publisher(
-            String, "aardbeien/detecties", qos_rel)
-        self._pub_rijp = self.create_publisher(
-            PoseArray, "aardbeien/rijp", qos_rel)
-        self._pub_onrijp = self.create_publisher(
-            PoseArray, "aardbeien/onrijp", qos_rel)
-        self._pub_frame = self.create_publisher(
-            Image, "aardbeien/frame", qos_img)
-        self._pub_masker_rood = self.create_publisher(
-            Image, "aardbeien/masker_rood", qos_img)
-        self._pub_masker_onrijp = self.create_publisher(
-            Image, "aardbeien/masker_onrijp", qos_img)
+        # ---- Publishers ----
+        self._pub_detecties     = self.create_publisher(String,    "aardbeien/detecties",     qos_rel)
+        self._pub_rijp          = self.create_publisher(PoseArray, "aardbeien/rijp",           qos_rel)
+        self._pub_onrijp        = self.create_publisher(PoseArray, "aardbeien/onrijp",         qos_rel)
+        self._pub_frame         = self.create_publisher(Image,     "aardbeien/frame",          qos_img)
+        self._pub_masker_rood   = self.create_publisher(Image,     "aardbeien/masker_rood",    qos_img)
+        self._pub_masker_onrijp = self.create_publisher(Image,     "aardbeien/masker_onrijp",  qos_img)
 
-        # --- Service: debug aan/uit ---
+        # ---- Service ----
         self._srv_debug = self.create_service(
             SetBool, "aardbeien/set_debug", self._cb_set_debug)
 
-        # --- UDP socket (legacy compatibiliteit) ---
-        self._sock     = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self._ros_addr = ("127.0.0.1", 5005)
-
-        # --- RTSP stream starten ---
-        self._start_stream()
-
-        # --- Verwerkingstimer ---
-        interval = 1.0 / self._target_fps
-        self._timer = self.create_timer(interval, self._verwerkings_callback)
+        # ---- Stream + verwerkingsthread starten ----
+        self._start_alles()
 
         self.get_logger().info(
             f"AardbeiDetectieNode gestart — RTSP: {self._rtsp_url}"
         )
+        if self._stream_pi2:
+            self.get_logger().info(
+                f"Framestream actief → {self._pi2_ip}:{self._pi2_port}"
+            )
 
-    # --------------------------------------------------------
-    # Parameterverwerking
-    # --------------------------------------------------------
+    # ----------------------------------------------------------
+    # Parameters
+    # ----------------------------------------------------------
 
     def _lees_params(self):
         ip   = self.get_parameter("recamera_ip").value
@@ -558,50 +566,101 @@ class AardbeiDetectieNode(Node):
         self._stream_pi2  = self.get_parameter("stream_naar_pi2").value
         self._pi2_ip      = self.get_parameter("pi2_ip").value
         self._pi2_port    = self.get_parameter("pi2_port").value
+        self._legacy_udp  = self.get_parameter("legacy_udp").value
         self._debug       = self.get_parameter("debug").value
         self._debug_schijf = self.get_parameter("debug_schijf").value
 
     def _on_param_change(self, params):
-        for param in params:
-            if param.name == "debug":
-                self._debug = param.value
+        herstart = False
+        for p in params:
+            if p.name in ("recamera_ip", "recamera_user", "recamera_pass",
+                          "ffmpeg_path", "target_fps"):
+                herstart = True          # stream moet opnieuw starten
+            elif p.name == "stream_naar_pi2":
+                self._stream_pi2 = p.value
+                herstart = True
+            elif p.name == "pi2_ip":
+                self._pi2_ip = p.value
+                herstart = True
+            elif p.name == "pi2_port":
+                self._pi2_port = p.value
+                herstart = True
+            elif p.name == "legacy_udp":
+                self._legacy_udp = p.value
+                self._initialiseer_udp_socket()
+            elif p.name == "debug":
+                self._debug = p.value
                 self.get_logger().info(f"Debug: {self._debug}")
-            elif param.name == "debug_schijf":
-                self._debug_schijf = param.value
+            elif p.name == "debug_schijf":
+                self._debug_schijf = p.value
+
+        if herstart:
+            self._lees_params()
+            self._start_alles()
+
         return SetParametersResult(successful=True)
 
-    # --------------------------------------------------------
-    # Stream beheer
-    # --------------------------------------------------------
+    # ----------------------------------------------------------
+    # Opstarten / herstart
+    # ----------------------------------------------------------
 
-    def _start_stream(self):
+    def _initialiseer_udp_socket(self):
+        """Maakt UDP-socket aan of sluit hem, afhankelijk van legacy_udp param."""
+        if self._legacy_udp:
+            if self._sock is None:
+                self._sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+                self.get_logger().info("Legacy UDP socket geopend (poort 5005)")
+        else:
+            if self._sock is not None:
+                self._sock.close()
+                self._sock = None
+
+    def _start_alles(self):
+        # Stop bestaande verwerkingsthread
+        self._stop_event.set()
+        if self._verwerkings_thread and self._verwerkings_thread.is_alive():
+            self._verwerkings_thread.join(timeout=3)
+        self._stop_event.clear()
+
+        # Stop bestaande stream en streamer
         if self._stream:
             self._stream.stop()
+        if self._streamer:
+            self._streamer.stop()
+            self._streamer = None
 
+        # UDP socket beheren
+        self._initialiseer_udp_socket()
+
+        # Nieuwe RTSP stream
         self._stream = RTSPStream(
             url=self._rtsp_url,
             fps=self._target_fps,
             ffmpeg_path=self._ffmpeg_path,
         )
         self._stream.start()
-        self._laatste_frame_id = None
 
+        # Optionele framestreamer naar Pi 2
         if self._stream_pi2:
-            if self._streamer:
-                self._streamer.stop()
             self._streamer = FrameStreamer(
-                self._pi2_ip, self._pi2_port,
-                RTSPStream.OUT_W, RTSPStream.OUT_H,
-                self._target_fps, self._ffmpeg_path,
+                ip=self._pi2_ip,
+                port=self._pi2_port,
+                w=RTSPStream.OUT_W,
+                h=RTSPStream.OUT_H,
+                fps=self._target_fps,
+                ffmpeg_path=self._ffmpeg_path,
             )
             self._streamer.start()
-            self.get_logger().info(
-                f"Framestream actief → {self._pi2_ip}:{self._pi2_port}"
-            )
 
-    # --------------------------------------------------------
-    # Service callbacks
-    # --------------------------------------------------------
+        # Verwerkingsthread (blokkeert op nieuwe frames — geen timer-conflict)
+        self._verwerkings_thread = threading.Thread(
+            target=self._verwerkings_loop, daemon=True
+        )
+        self._verwerkings_thread.start()
+
+    # ----------------------------------------------------------
+    # Service
+    # ----------------------------------------------------------
 
     def _cb_set_debug(self, req, resp):
         self._debug = req.data
@@ -610,38 +669,46 @@ class AardbeiDetectieNode(Node):
         self.get_logger().info(resp.message)
         return resp
 
-    # --------------------------------------------------------
-    # Hoofd verwerkingsloop (timer-callback)
-    # --------------------------------------------------------
+    # ----------------------------------------------------------
+    # Verwerkingsloop (eigen thread — geen ROS-timer)
+    # ----------------------------------------------------------
 
-    def _verwerkings_callback(self):
-        if not self._stream or not self._stream.is_ready():
-            return
+    def _verwerkings_loop(self):
+        laatste_frame_id = None
 
-        frame_id, frame = self._stream.read(
-            last_seen_id=self._laatste_frame_id, timeout=0.05
-        )
+        while not self._stop_event.is_set():
+            if not self._stream or not self._stream.is_ready():
+                time.sleep(0.05)
+                continue
 
-        if frame is None or frame_id == self._laatste_frame_id:
-            return
-        self._laatste_frame_id = frame_id
+            # Blokkeer tot nieuw frame (max 100 ms) — geen timer-conflict
+            frame_id, frame = self._stream.read(
+                last_seen_id=laatste_frame_id, timeout=0.1
+            )
 
+            if frame is None or frame_id == laatste_frame_id:
+                continue
+            laatste_frame_id = frame_id
+
+            self._verwerk_frame(frame)
+
+    def _verwerk_frame(self, frame: np.ndarray):
         now = self.get_clock().now().to_msg()
 
-        # --- Kleurverwerking ---
+        # ---- Kleurverwerking ----
         blurred       = cv2.GaussianBlur(frame, (3, 3), 0)
         hsv           = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
         masker_rood   = pas_morfologie_toe(maak_rood_masker(hsv),   agressief=False)
         masker_onrijp = pas_morfologie_toe(maak_onrijp_masker(hsv), agressief=True)
 
-        # --- Detectie ---
+        # ---- Detectie ----
         rijpe   = detecteer_aardbeien(masker_rood,   rijp=True,  debug=self._debug)
         onrijpe = detecteer_aardbeien(masker_onrijp, rijp=False, debug=self._debug)
         onrijpe = verwijder_dubbelen(rijpe, onrijpe)
         alle    = rijpe + onrijpe
 
-        # --- Bewegingsrichting ---
-        richtingen:    dict = {}
+        # ---- Bewegingsrichting ----
+        richtingen:     dict = {}
         nieuwe_posities: dict = {}
 
         for d in alle:
@@ -659,7 +726,7 @@ class AardbeiDetectieNode(Node):
 
         self._vorige_posities = nieuwe_posities
 
-        # --- Annotaties op frame ---
+        # ---- Annotaties ----
         teken_detecties(frame, alle, richtingen)
 
         if self._debug_schijf:
@@ -673,7 +740,7 @@ class AardbeiDetectieNode(Node):
         cv2.putText(frame, "Oranje = Onrijp", (10, 45),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.55, COLOR_UNRIPE, 2)
 
-        # --- Publiceer beelden ---
+        # ---- Publiceer beelden ----
         self._pub_frame.publish(
             self._bridge.cv2_to_imgmsg(frame, encoding="bgr8"))
         self._pub_masker_rood.publish(
@@ -681,7 +748,7 @@ class AardbeiDetectieNode(Node):
         self._pub_masker_onrijp.publish(
             self._bridge.cv2_to_imgmsg(masker_onrijp, encoding="mono8"))
 
-        # --- Publiceer PoseArrays ---
+        # ---- Publiceer PoseArrays ----
         def maak_pose_array(detecties):
             pa = PoseArray()
             pa.header.stamp    = now
@@ -692,70 +759,70 @@ class AardbeiDetectieNode(Node):
         self._pub_rijp.publish(maak_pose_array(rijpe))
         self._pub_onrijp.publish(maak_pose_array(onrijpe))
 
-        # --- Publiceer JSON-payload ---
+        # ---- Publiceer JSON ----
         payload = []
         for d in alle:
             sleutel  = maak_positie_sleutel(d)
             richting = richtingen.get(sleutel, "ONBEKEND")
             payload.append({
-                "rijp":      d["rijp"],
-                "cx":        d["cx"],
-                "cy":        d["cy"],
-                "z_mm":      d["z_mm"],
-                "z_methode": d["z_methode"],
-                "richting":  richting,
-                "radius":    d["radius"],
+                "rijp":        d["rijp"],
+                "cx":          d["cx"],
+                "cy":          d["cy"],
+                "z_mm":        d["z_mm"],
+                "z_methode":   d["z_methode"],
+                "richting":    richting,
+                "radius":      d["radius"],
                 "kleur_ratio": round(d["kleur_ratio"], 3),
             })
         self._pub_detecties.publish(String(data=json.dumps(payload)))
 
-        # --- Legacy UDP naar ROS-master (optioneel) ---
-        nieuwe_udp: dict = {}
+        # ---- Legacy UDP (optioneel) ----
+        if self._legacy_udp and self._sock:
+            nieuwe_udp: dict = {}
+            for d in rijpe:
+                sleutel  = maak_positie_sleutel(d)
+                richting = richtingen.get(sleutel, "ONBEKEND")
+                nieuwe_udp[sleutel] = (
+                    f"RIJP,{d['cx']},{d['cy']},{d['z_mm']:.0f},{richting}"
+                )
+            for d in onrijpe:
+                sleutel  = maak_positie_sleutel(d)
+                richting = richtingen.get(sleutel, "ONBEKEND")
+                nieuwe_udp[sleutel] = (
+                    f"ONRIJP,{d['cx']},{d['cy']},{d['z_mm']:.0f},{richting}"
+                )
+            for sleutel, bericht in nieuwe_udp.items():
+                if self._verstuurde_posities.get(sleutel) != bericht:
+                    try:
+                        self._sock.sendto(bericht.encode(), ("127.0.0.1", 5005))
+                        self._verstuurde_posities[sleutel] = bericht
+                    except OSError as e:
+                        self.get_logger().warn(f"UDP fout: {e}")
+            for sleutel in list(self._verstuurde_posities):
+                if sleutel not in nieuwe_udp:
+                    del self._verstuurde_posities[sleutel]
 
-        for d in rijpe:
-            sleutel  = maak_positie_sleutel(d)
-            richting = richtingen.get(sleutel, "ONBEKEND")
-            nieuwe_udp[sleutel] = (
-                f"RIJP,{d['cx']},{d['cy']},{d['z_mm']:.0f},{richting}"
-            )
-        for d in onrijpe:
-            sleutel  = maak_positie_sleutel(d)
-            richting = richtingen.get(sleutel, "ONBEKEND")
-            nieuwe_udp[sleutel] = (
-                f"ONRIJP,{d['cx']},{d['cy']},{d['z_mm']:.0f},{richting}"
-            )
-
-        for sleutel, bericht in nieuwe_udp.items():
-            if self._verstuurde_posities.get(sleutel) != bericht:
-                try:
-                    self._sock.sendto(bericht.encode(), self._ros_addr)
-                    self._verstuurde_posities[sleutel] = bericht
-                except OSError as e:
-                    self.get_logger().warn(f"UDP fout: {e}")
-
-        for sleutel in list(self._verstuurde_posities):
-            if sleutel not in nieuwe_udp:
-                del self._verstuurde_posities[sleutel]
-
-        # --- Optioneel: stream naar Pi 2 ---
+        # ---- Stream naar Pi 2 (display) ----
         if self._streamer:
             self._streamer.stuur_frame(frame)
 
-    # --------------------------------------------------------
+    # ----------------------------------------------------------
     # Opruimen
-    # --------------------------------------------------------
+    # ----------------------------------------------------------
 
     def destroy_node(self):
+        self._stop_event.set()
         if self._stream:
             self._stream.stop()
         if self._streamer:
             self._streamer.stop()
-        self._sock.close()
+        if self._sock:
+            self._sock.close()
         super().destroy_node()
 
 
 # ============================================================
-# === ENTRY POINT ============================================
+# === ENTRY POINT — PI 1 =====================================
 # ============================================================
 
 def main(args=None):
