@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: aardbeien-detectie
+Version: 1.0.0
+Summary: Aardbeidetectie via reCamera RTSP-stream — ROS2 node
+Maintainer: Jouw Naam
+Maintainer-email: jij@example.com
+License: MIT

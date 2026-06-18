@@ -1,0 +1,28 @@
+[2.851s] Invoking command in '/home/groep8/rs2_ws/src/hogpie_camera': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_camera/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_camera build --build-base /home/groep8/rs2_ws/build/hogpie_camera/build install --record /home/groep8/rs2_ws/build/hogpie_camera/install.log --single-version-externally-managed install_data
+[3.387s] running egg_info
+[3.387s] creating ../../build/hogpie_camera/aardbeien_detectie.egg-info
+[3.429s] writing ../../build/hogpie_camera/aardbeien_detectie.egg-info/PKG-INFO
+[3.431s] writing dependency_links to ../../build/hogpie_camera/aardbeien_detectie.egg-info/dependency_links.txt
+[3.431s] writing entry points to ../../build/hogpie_camera/aardbeien_detectie.egg-info/entry_points.txt
+[3.431s] writing requirements to ../../build/hogpie_camera/aardbeien_detectie.egg-info/requires.txt
+[3.431s] writing top-level names to ../../build/hogpie_camera/aardbeien_detectie.egg-info/top_level.txt
+[3.432s] writing manifest file '../../build/hogpie_camera/aardbeien_detectie.egg-info/SOURCES.txt'
+[3.501s] reading manifest file '../../build/hogpie_camera/aardbeien_detectie.egg-info/SOURCES.txt'
+[3.502s] writing manifest file '../../build/hogpie_camera/aardbeien_detectie.egg-info/SOURCES.txt'
+[3.503s] running build
+[3.504s] running build_py
+[3.504s] creating /home/groep8/rs2_ws/build/hogpie_camera/build
+[3.505s] creating /home/groep8/rs2_ws/build/hogpie_camera/build/lib
+[3.507s] creating /home/groep8/rs2_ws/build/hogpie_camera/build/lib/hogpie_camera
+[3.509s] copying hogpie_camera/__init__.py -> /home/groep8/rs2_ws/build/hogpie_camera/build/lib/hogpie_camera
+[3.513s] copying hogpie_camera/strawberry_detection_node.py -> /home/groep8/rs2_ws/build/hogpie_camera/build/lib/hogpie_camera
+[3.517s] running install
+[3.526s] running install_lib
+[3.561s] creating /home/groep8/rs2_ws/install/hogpie_camera/lib/python3.12/site-packages/hogpie_camera
+[3.562s] copying /home/groep8/rs2_ws/build/hogpie_camera/build/lib/hogpie_camera/__init__.py -> /home/groep8/rs2_ws/install/hogpie_camera/lib/python3.12/site-packages/hogpie_camera
+[3.562s] copying /home/groep8/rs2_ws/build/hogpie_camera/build/lib/hogpie_camera/strawberry_detection_node.py -> /home/groep8/rs2_ws/install/hogpie_camera/lib/python3.12/site-packages/hogpie_camera
+[3.569s] byte-compiling /home/groep8/rs2_ws/install/hogpie_camera/lib/python3.12/site-packages/hogpie_camera/__init__.py to __init__.cpython-312.pyc
+[3.570s] byte-compiling /home/groep8/rs2_ws/install/hogpie_camera/lib/python3.12/site-packages/hogpie_camera/strawberry_detection_node.py to strawberry_detection_node.cpython-312.pyc
+[3.570s] running install_data
+[3.571s] error: can't copy 'resource/aardbeien_detectie': doesn't exist or not a regular file
+[3.714s] Invoked command in '/home/groep8/rs2_ws/src/hogpie_camera' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_camera/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_camera build --build-base /home/groep8/rs2_ws/build/hogpie_camera/build install --record /home/groep8/rs2_ws/build/hogpie_camera/install.log --single-version-externally-managed install_data

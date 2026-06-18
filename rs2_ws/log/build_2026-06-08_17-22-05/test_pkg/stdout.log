@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing test_pkg.egg-info/PKG-INFO
+writing dependency_links to test_pkg.egg-info/dependency_links.txt
+writing entry points to test_pkg.egg-info/entry_points.txt
+writing requirements to test_pkg.egg-info/requires.txt
+writing top-level names to test_pkg.egg-info/top_level.txt
+reading manifest file 'test_pkg.egg-info/SOURCES.txt'
+writing manifest file 'test_pkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/groep8/rs2_ws/install/test_pkg/lib/python3.12/site-packages/test-pkg.egg-link (link to .)
+Installing test_node script to /home/groep8/rs2_ws/install/test_pkg/lib/test_pkg
+
+Installed /home/groep8/rs2_ws/build/test_pkg
+running symlink_data
+symbolically linking /home/groep8/rs2_ws/build/test_pkg/resource/test_pkg -> /home/groep8/rs2_ws/install/test_pkg/share/ament_index/resource_index/packages
+symbolically linking /home/groep8/rs2_ws/build/test_pkg/package.xml -> /home/groep8/rs2_ws/install/test_pkg/share/test_pkg

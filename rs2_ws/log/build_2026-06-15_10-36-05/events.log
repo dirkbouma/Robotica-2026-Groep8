@@ -1,0 +1,10 @@
+[0.000000] (-) TimerEvent: {}
+[0.000429] (-) JobUnselected: {'identifier': 'aardbeien_detectie'}
+[0.000698] (-) JobUnselected: {'identifier': 'hogpie_arm_description'}
+[0.000814] (-) JobUnselected: {'identifier': 'hogpie_arm_driver'}
+[0.000838] (-) JobUnselected: {'identifier': 'hogpie_arm_moveit_config'}
+[0.000859] (-) JobUnselected: {'identifier': 'hogpie_controller_sensors'}
+[0.000884] (-) JobUnselected: {'identifier': 'hogpie_servo_control'}
+[0.000904] (-) JobUnselected: {'identifier': 'my_robot_description'}
+[0.000923] (-) JobUnselected: {'identifier': 'planar_arm_moveit_config'}
+[0.001301] (-) EventReactorShutdown: {}

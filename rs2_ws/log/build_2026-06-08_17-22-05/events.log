@@ -1,0 +1,373 @@
+[0.000000] (-) TimerEvent: {}
+[0.000425] (my_robot_description) JobQueued: {'identifier': 'my_robot_description', 'dependencies': OrderedDict()}
+[0.001462] (planar_arm_moveit_config) JobQueued: {'identifier': 'planar_arm_moveit_config', 'dependencies': OrderedDict()}
+[0.001942] (test_pkg) JobQueued: {'identifier': 'test_pkg', 'dependencies': OrderedDict()}
+[0.001969] (my_robot_description) JobStarted: {'identifier': 'my_robot_description'}
+[0.031270] (planar_arm_moveit_config) JobStarted: {'identifier': 'planar_arm_moveit_config'}
+[0.048754] (test_pkg) JobStarted: {'identifier': 'test_pkg'}
+[0.079960] (my_robot_description) JobProgress: {'identifier': 'my_robot_description', 'progress': 'cmake'}
+[0.087336] (my_robot_description) Command: {'cmd': ['/usr/bin/cmake', '/home/groep8/rs2_ws/src/my_robot_description', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/groep8/rs2_ws/install/my_robot_description'], 'cwd': '/home/groep8/rs2_ws/build/my_robot_description', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2143-2-groep8-desktop_TIME2195211', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'groep8', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/groep8/dxl_ws/install/dynamixel_sdk/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/groep8', 'OLDPWD': '/home/groep8/rs2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1890', 'SYSTEMD_EXEC_PID': '2143', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '7361', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/groep8/dxl_ws/install:/home/groep8/rs2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'groep8', 'JOURNAL_STREAM': '8:19584', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'groep8', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/groep8-desktop:@/tmp/.ICE-unix/2112,unix/groep8-desktop:/tmp/.ICE-unix/2112', 'INVOCATION_ID': '9d12ee988153482f8a0e8993dda41217', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.465NQ3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:cbf4ca67-a0e8-4a1b-b32c-aac221ea4aa6', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/groep8/rs2_ws/build/my_robot_description', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/groep8/rs2_ws/install/test_pkg/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/groep8/rs2_ws/install/test_pkg:/opt/ros/jazzy'}), 'shell': False}
+[0.102190] (-) TimerEvent: {}
+[0.109857] (planar_arm_moveit_config) JobProgress: {'identifier': 'planar_arm_moveit_config', 'progress': 'cmake'}
+[0.115220] (planar_arm_moveit_config) Command: {'cmd': ['/usr/bin/cmake', '/home/groep8/rs2_ws/src/planar_arm_moveit_config', '-DCMAKE_INSTALL_PREFIX=/home/groep8/rs2_ws/install/planar_arm_moveit_config'], 'cwd': '/home/groep8/rs2_ws/build/planar_arm_moveit_config', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2143-2-groep8-desktop_TIME2195211', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'groep8', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/groep8/dxl_ws/install/dynamixel_sdk/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/groep8', 'OLDPWD': '/home/groep8/rs2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1890', 'SYSTEMD_EXEC_PID': '2143', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '7361', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/groep8/dxl_ws/install:/home/groep8/rs2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'groep8', 'JOURNAL_STREAM': '8:19584', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'groep8', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/groep8-desktop:@/tmp/.ICE-unix/2112,unix/groep8-desktop:/tmp/.ICE-unix/2112', 'INVOCATION_ID': '9d12ee988153482f8a0e8993dda41217', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.465NQ3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:cbf4ca67-a0e8-4a1b-b32c-aac221ea4aa6', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/groep8/rs2_ws/build/planar_arm_moveit_config', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/groep8/rs2_ws/install/test_pkg/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[0.177833] (my_robot_description) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.203201] (-) TimerEvent: {}
+[0.308096] (-) TimerEvent: {}
+[0.410427] (-) TimerEvent: {}
+[0.515290] (-) TimerEvent: {}
+[0.522549] (planar_arm_moveit_config) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.617416] (-) TimerEvent: {}
+[0.720418] (-) TimerEvent: {}
+[0.821680] (-) TimerEvent: {}
+[0.880104] (planar_arm_moveit_config) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.924596] (-) TimerEvent: {}
+[0.986950] (planar_arm_moveit_config) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.027912] (-) TimerEvent: {}
+[1.131798] (-) TimerEvent: {}
+[1.236006] (-) TimerEvent: {}
+[1.336719] (-) TimerEvent: {}
+[1.442762] (-) TimerEvent: {}
+[1.546586] (-) TimerEvent: {}
+[1.614670] (planar_arm_moveit_config) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.646763] (-) TimerEvent: {}
+[1.675452] (planar_arm_moveit_config) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.676401] (planar_arm_moveit_config) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.680619] (planar_arm_moveit_config) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.731144] (planar_arm_moveit_config) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.748693] (-) TimerEvent: {}
+[1.853545] (-) TimerEvent: {}
+[1.906436] (my_robot_description) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.954011] (-) TimerEvent: {}
+[1.967741] (my_robot_description) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[2.055423] (-) TimerEvent: {}
+[2.156175] (-) TimerEvent: {}
+[2.259357] (-) TimerEvent: {}
+[2.345565] (planar_arm_moveit_config) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.360162] (-) TimerEvent: {}
+[2.377732] (planar_arm_moveit_config) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.386305] (planar_arm_moveit_config) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.386865] (planar_arm_moveit_config) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.395348] (planar_arm_moveit_config) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[2.461573] (-) TimerEvent: {}
+[2.564090] (-) TimerEvent: {}
+[2.624547] (my_robot_description) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[2.625851] (my_robot_description) StdoutLine: {'line': b"-- Configured 'flake8' exclude dirs and/or files: \n"}
+[2.626218] (my_robot_description) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.635410] (my_robot_description) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[2.641534] (my_robot_description) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.652238] (my_robot_description) StdoutLine: {'line': b'-- Configuring done (2.5s)\n'}
+[2.664231] (-) TimerEvent: {}
+[2.672395] (my_robot_description) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[2.699364] (my_robot_description) StdoutLine: {'line': b'-- Build files have been written to: /home/groep8/rs2_ws/build/my_robot_description\n'}
+[2.714233] (my_robot_description) CommandEnded: {'returncode': 0}
+[2.717215] (my_robot_description) JobProgress: {'identifier': 'my_robot_description', 'progress': 'build'}
+[2.717324] (my_robot_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/groep8/rs2_ws/build/my_robot_description', '--', '-j4', '-l4'], 'cwd': '/home/groep8/rs2_ws/build/my_robot_description', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2143-2-groep8-desktop_TIME2195211', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'groep8', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/groep8/dxl_ws/install/dynamixel_sdk/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/groep8', 'OLDPWD': '/home/groep8/rs2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1890', 'SYSTEMD_EXEC_PID': '2143', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '7361', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/groep8/dxl_ws/install:/home/groep8/rs2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'groep8', 'JOURNAL_STREAM': '8:19584', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'groep8', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/groep8-desktop:@/tmp/.ICE-unix/2112,unix/groep8-desktop:/tmp/.ICE-unix/2112', 'INVOCATION_ID': '9d12ee988153482f8a0e8993dda41217', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.465NQ3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:cbf4ca67-a0e8-4a1b-b32c-aac221ea4aa6', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/groep8/rs2_ws/build/my_robot_description', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/groep8/rs2_ws/install/test_pkg/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/groep8/rs2_ws/install/test_pkg:/opt/ros/jazzy'}), 'shell': False}
+[2.769096] (-) TimerEvent: {}
+[2.877301] (-) TimerEvent: {}
+[2.945385] (my_robot_description) CommandEnded: {'returncode': 0}
+[2.947074] (my_robot_description) JobProgress: {'identifier': 'my_robot_description', 'progress': 'install'}
+[2.977478] (-) TimerEvent: {}
+[3.014435] (my_robot_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/groep8/rs2_ws/build/my_robot_description'], 'cwd': '/home/groep8/rs2_ws/build/my_robot_description', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2143-2-groep8-desktop_TIME2195211', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'groep8', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/groep8/dxl_ws/install/dynamixel_sdk/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/groep8', 'OLDPWD': '/home/groep8/rs2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1890', 'SYSTEMD_EXEC_PID': '2143', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '7361', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/groep8/dxl_ws/install:/home/groep8/rs2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'groep8', 'JOURNAL_STREAM': '8:19584', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'groep8', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/groep8-desktop:@/tmp/.ICE-unix/2112,unix/groep8-desktop:/tmp/.ICE-unix/2112', 'INVOCATION_ID': '9d12ee988153482f8a0e8993dda41217', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.465NQ3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:cbf4ca67-a0e8-4a1b-b32c-aac221ea4aa6', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/groep8/rs2_ws/build/my_robot_description', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/groep8/rs2_ws/install/test_pkg/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/groep8/rs2_ws/install/test_pkg:/opt/ros/jazzy'}), 'shell': False}
+[3.080457] (-) TimerEvent: {}
+[3.096397] (my_robot_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.097586] (my_robot_description) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[3.115382] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/launch/display.launch.py\n'}
+[3.157408] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/urdf/robot.urdf\n'}
+[3.180653] (-) TimerEvent: {}
+[3.215120] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/urdf/robot.urdf.xacro\n'}
+[3.258594] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/ament_index/resource_index/package_run_dependencies/my_robot_description\n'}
+[3.280879] (-) TimerEvent: {}
+[3.323526] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/ament_index/resource_index/parent_prefix_path/my_robot_description\n'}
+[3.367489] (planar_arm_moveit_config) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[3.377411] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/environment/ament_prefix_path.sh\n'}
+[3.381211] (-) TimerEvent: {}
+[3.431334] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/environment/ament_prefix_path.dsv\n'}
+[3.481387] (-) TimerEvent: {}
+[3.482656] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/environment/path.sh\n'}
+[3.559941] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/environment/path.dsv\n'}
+[3.581548] (-) TimerEvent: {}
+[3.647914] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/local_setup.bash\n'}
+[3.684337] (-) TimerEvent: {}
+[3.694620] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/local_setup.sh\n'}
+[3.770934] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/local_setup.zsh\n'}
+[3.784638] (-) TimerEvent: {}
+[3.820477] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/local_setup.dsv\n'}
+[3.897457] (-) TimerEvent: {}
+[3.927327] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/package.dsv\n'}
+[3.965199] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/ament_index/resource_index/packages/my_robot_description\n'}
+[3.997654] (-) TimerEvent: {}
+[4.019059] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/cmake/my_robot_descriptionConfig.cmake\n'}
+[4.070102] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/cmake/my_robot_descriptionConfig-version.cmake\n'}
+[4.098205] (-) TimerEvent: {}
+[4.152600] (my_robot_description) StdoutLine: {'line': b'-- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/package.xml\n'}
+[4.198656] (-) TimerEvent: {}
+[4.269646] (my_robot_description) CommandEnded: {'returncode': 0}
+[4.304486] (-) TimerEvent: {}
+[4.428402] (-) TimerEvent: {}
+[4.510081] (my_robot_description) JobEnded: {'identifier': 'my_robot_description', 'rc': 0}
+[4.528964] (-) TimerEvent: {}
+[4.638718] (-) TimerEvent: {}
+[4.650279] (planar_arm_moveit_config) StderrLine: {'line': b"Error parsing '/home/groep8/rs2_ws/src/planar_arm_moveit_config/package.xml':\n"}
+[4.739875] (-) TimerEvent: {}
+[4.840504] (-) TimerEvent: {}
+[4.943164] (-) TimerEvent: {}
+[5.045189] (-) TimerEvent: {}
+[5.151866] (-) TimerEvent: {}
+[5.252399] (-) TimerEvent: {}
+[5.261674] (test_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/groep8/rs2_ws/build/test_pkg/build', '--no-deps', 'symlink_data', '--force'], 'cwd': '/home/groep8/rs2_ws/build/test_pkg', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2143-2-groep8-desktop_TIME2195211', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'groep8', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/groep8/dxl_ws/install/dynamixel_sdk/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/groep8', 'OLDPWD': '/home/groep8/rs2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1890', 'SYSTEMD_EXEC_PID': '2143', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '7361', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/groep8/dxl_ws/install:/home/groep8/rs2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'groep8', 'JOURNAL_STREAM': '8:19584', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'groep8', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/groep8-desktop:@/tmp/.ICE-unix/2112,unix/groep8-desktop:/tmp/.ICE-unix/2112', 'INVOCATION_ID': '9d12ee988153482f8a0e8993dda41217', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.465NQ3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:cbf4ca67-a0e8-4a1b-b32c-aac221ea4aa6', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/groep8/rs2_ws/build/test_pkg', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/groep8/rs2_ws/build/test_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/test_pkg/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/test_pkg/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[5.353300] (-) TimerEvent: {}
+[5.454940] (-) TimerEvent: {}
+[5.557974] (-) TimerEvent: {}
+[5.662989] (-) TimerEvent: {}
+[5.763622] (-) TimerEvent: {}
+[5.865363] (-) TimerEvent: {}
+[5.965746] (-) TimerEvent: {}
+[6.070504] (-) TimerEvent: {}
+[6.174818] (-) TimerEvent: {}
+[6.261857] (test_pkg) StdoutLine: {'line': b'running develop\n'}
+[6.276462] (-) TimerEvent: {}
+[6.378463] (-) TimerEvent: {}
+[6.479174] (-) TimerEvent: {}
+[6.583804] (-) TimerEvent: {}
+[6.691361] (-) TimerEvent: {}
+[6.796760] (-) TimerEvent: {}
+[6.897564] (-) TimerEvent: {}
+[6.999558] (-) TimerEvent: {}
+[7.041872] (test_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[7.102494] (-) TimerEvent: {}
+[7.110132] (test_pkg) StdoutLine: {'line': b'writing test_pkg.egg-info/PKG-INFO\n'}
+[7.111397] (test_pkg) StdoutLine: {'line': b'writing dependency_links to test_pkg.egg-info/dependency_links.txt\n'}
+[7.117318] (test_pkg) StdoutLine: {'line': b'writing entry points to test_pkg.egg-info/entry_points.txt\n'}
+[7.117687] (test_pkg) StdoutLine: {'line': b'writing requirements to test_pkg.egg-info/requires.txt\n'}
+[7.118197] (test_pkg) StdoutLine: {'line': b'writing top-level names to test_pkg.egg-info/top_level.txt\n'}
+[7.202671] (-) TimerEvent: {}
+[7.273021] (test_pkg) StdoutLine: {'line': b"reading manifest file 'test_pkg.egg-info/SOURCES.txt'\n"}
+[7.275390] (test_pkg) StdoutLine: {'line': b"writing manifest file 'test_pkg.egg-info/SOURCES.txt'\n"}
+[7.305048] (-) TimerEvent: {}
+[7.408456] (-) TimerEvent: {}
+[7.489245] (test_pkg) StdoutLine: {'line': b'running build_ext\n'}
+[7.493619] (test_pkg) StdoutLine: {'line': b'Creating /home/groep8/rs2_ws/install/test_pkg/lib/python3.12/site-packages/test-pkg.egg-link (link to .)\n'}
+[7.506951] (test_pkg) StdoutLine: {'line': b'Installing test_node script to /home/groep8/rs2_ws/install/test_pkg/lib/test_pkg\n'}
+[7.510966] (-) TimerEvent: {}
+[7.512990] (test_pkg) StdoutLine: {'line': b'\n'}
+[7.515886] (test_pkg) StdoutLine: {'line': b'Installed /home/groep8/rs2_ws/build/test_pkg\n'}
+[7.516500] (test_pkg) StdoutLine: {'line': b'running symlink_data\n'}
+[7.524916] (test_pkg) StdoutLine: {'line': b'symbolically linking /home/groep8/rs2_ws/build/test_pkg/resource/test_pkg -> /home/groep8/rs2_ws/install/test_pkg/share/ament_index/resource_index/packages\n'}
+[7.527007] (test_pkg) StdoutLine: {'line': b'symbolically linking /home/groep8/rs2_ws/build/test_pkg/package.xml -> /home/groep8/rs2_ws/install/test_pkg/share/test_pkg\n'}
+[7.613370] (-) TimerEvent: {}
+[7.716585] (-) TimerEvent: {}
+[7.819426] (-) TimerEvent: {}
+[7.924559] (-) TimerEvent: {}
+[8.028591] (-) TimerEvent: {}
+[8.131858] (-) TimerEvent: {}
+[8.209978] (test_pkg) CommandEnded: {'returncode': 0}
+[8.231946] (-) TimerEvent: {}
+[8.266646] (test_pkg) JobEnded: {'identifier': 'test_pkg', 'rc': 0}
+[8.334828] (-) TimerEvent: {}
+[8.438998] (-) TimerEvent: {}
+[8.540535] (-) TimerEvent: {}
+[8.642196] (-) TimerEvent: {}
+[8.746663] (-) TimerEvent: {}
+[8.848551] (-) TimerEvent: {}
+[8.949612] (-) TimerEvent: {}
+[9.051397] (-) TimerEvent: {}
+[9.152901] (-) TimerEvent: {}
+[9.254027] (-) TimerEvent: {}
+[9.357414] (-) TimerEvent: {}
+[9.458725] (-) TimerEvent: {}
+[9.560442] (-) TimerEvent: {}
+[9.663621] (-) TimerEvent: {}
+[9.764642] (-) TimerEvent: {}
+[9.868953] (-) TimerEvent: {}
+[9.970974] (-) TimerEvent: {}
+[10.074088] (-) TimerEvent: {}
+[10.175867] (-) TimerEvent: {}
+[10.282810] (-) TimerEvent: {}
+[10.385416] (-) TimerEvent: {}
+[10.490716] (-) TimerEvent: {}
+[10.594134] (-) TimerEvent: {}
+[10.696504] (-) TimerEvent: {}
+[10.797948] (-) TimerEvent: {}
+[10.899965] (-) TimerEvent: {}
+[11.001004] (-) TimerEvent: {}
+[11.103736] (-) TimerEvent: {}
+[11.205512] (-) TimerEvent: {}
+[11.307065] (-) TimerEvent: {}
+[11.409005] (-) TimerEvent: {}
+[11.514748] (-) TimerEvent: {}
+[11.625877] (-) TimerEvent: {}
+[11.730576] (-) TimerEvent: {}
+[11.832087] (-) TimerEvent: {}
+[11.935588] (-) TimerEvent: {}
+[12.038406] (-) TimerEvent: {}
+[12.142222] (-) TimerEvent: {}
+[12.244984] (-) TimerEvent: {}
+[12.347191] (-) TimerEvent: {}
+[12.452638] (-) TimerEvent: {}
+[12.554190] (-) TimerEvent: {}
+[12.655501] (-) TimerEvent: {}
+[12.759822] (-) TimerEvent: {}
+[12.864211] (-) TimerEvent: {}
+[12.970780] (-) TimerEvent: {}
+[13.074902] (-) TimerEvent: {}
+[13.178008] (-) TimerEvent: {}
+[13.286875] (-) TimerEvent: {}
+[13.393518] (-) TimerEvent: {}
+[13.499826] (-) TimerEvent: {}
+[13.601222] (-) TimerEvent: {}
+[13.705166] (-) TimerEvent: {}
+[13.811380] (-) TimerEvent: {}
+[13.917964] (-) TimerEvent: {}
+[14.022653] (-) TimerEvent: {}
+[14.124179] (-) TimerEvent: {}
+[14.228393] (-) TimerEvent: {}
+[14.330752] (-) TimerEvent: {}
+[14.436023] (-) TimerEvent: {}
+[14.541224] (-) TimerEvent: {}
+[14.642996] (-) TimerEvent: {}
+[14.748515] (-) TimerEvent: {}
+[14.849799] (-) TimerEvent: {}
+[14.955989] (-) TimerEvent: {}
+[15.057246] (-) TimerEvent: {}
+[15.158294] (-) TimerEvent: {}
+[15.260234] (-) TimerEvent: {}
+[15.368345] (-) TimerEvent: {}
+[15.477168] (-) TimerEvent: {}
+[15.580932] (-) TimerEvent: {}
+[15.687731] (-) TimerEvent: {}
+[15.789157] (-) TimerEvent: {}
+[15.890950] (-) TimerEvent: {}
+[15.992855] (-) TimerEvent: {}
+[16.099056] (-) TimerEvent: {}
+[16.201162] (-) TimerEvent: {}
+[16.304728] (-) TimerEvent: {}
+[16.406784] (-) TimerEvent: {}
+[16.509043] (-) TimerEvent: {}
+[16.614353] (-) TimerEvent: {}
+[16.717980] (-) TimerEvent: {}
+[16.827405] (-) TimerEvent: {}
+[16.928445] (-) TimerEvent: {}
+[17.033162] (-) TimerEvent: {}
+[17.136430] (-) TimerEvent: {}
+[17.238016] (-) TimerEvent: {}
+[17.340000] (-) TimerEvent: {}
+[17.441560] (-) TimerEvent: {}
+[17.544322] (-) TimerEvent: {}
+[17.651979] (-) TimerEvent: {}
+[17.757666] (-) TimerEvent: {}
+[17.861694] (-) TimerEvent: {}
+[17.963334] (-) TimerEvent: {}
+[18.065619] (-) TimerEvent: {}
+[18.168656] (-) TimerEvent: {}
+[18.269833] (-) TimerEvent: {}
+[18.371499] (-) TimerEvent: {}
+[18.473421] (-) TimerEvent: {}
+[18.580853] (-) TimerEvent: {}
+[18.684132] (-) TimerEvent: {}
+[18.785807] (-) TimerEvent: {}
+[18.887744] (-) TimerEvent: {}
+[18.989846] (-) TimerEvent: {}
+[19.096796] (-) TimerEvent: {}
+[19.198769] (-) TimerEvent: {}
+[19.302753] (-) TimerEvent: {}
+[19.410476] (-) TimerEvent: {}
+[19.521244] (-) TimerEvent: {}
+[19.622649] (-) TimerEvent: {}
+[19.723542] (-) TimerEvent: {}
+[19.826930] (-) TimerEvent: {}
+[19.927996] (-) TimerEvent: {}
+[20.029547] (-) TimerEvent: {}
+[20.140508] (-) TimerEvent: {}
+[20.247738] (-) TimerEvent: {}
+[20.352444] (-) TimerEvent: {}
+[20.454568] (-) TimerEvent: {}
+[20.560782] (-) TimerEvent: {}
+[20.662037] (-) TimerEvent: {}
+[20.763410] (-) TimerEvent: {}
+[20.865025] (-) TimerEvent: {}
+[20.966391] (-) TimerEvent: {}
+[21.067740] (-) TimerEvent: {}
+[21.169153] (-) TimerEvent: {}
+[21.270125] (-) TimerEvent: {}
+[21.371271] (-) TimerEvent: {}
+[21.473686] (-) TimerEvent: {}
+[21.575398] (-) TimerEvent: {}
+[21.677303] (-) TimerEvent: {}
+[21.778083] (-) TimerEvent: {}
+[21.881772] (-) TimerEvent: {}
+[21.984075] (-) TimerEvent: {}
+[22.086147] (-) TimerEvent: {}
+[22.187602] (-) TimerEvent: {}
+[22.289698] (-) TimerEvent: {}
+[22.392393] (-) TimerEvent: {}
+[22.494117] (-) TimerEvent: {}
+[22.601728] (-) TimerEvent: {}
+[22.703550] (-) TimerEvent: {}
+[22.805432] (-) TimerEvent: {}
+[22.910012] (-) TimerEvent: {}
+[23.017556] (-) TimerEvent: {}
+[23.118998] (-) TimerEvent: {}
+[23.220846] (-) TimerEvent: {}
+[23.324872] (-) TimerEvent: {}
+[23.431896] (-) TimerEvent: {}
+[23.534547] (-) TimerEvent: {}
+[23.636000] (-) TimerEvent: {}
+[23.738948] (-) TimerEvent: {}
+[23.841513] (-) TimerEvent: {}
+[23.944001] (-) TimerEvent: {}
+[24.048874] (-) TimerEvent: {}
+[24.150552] (-) TimerEvent: {}
+[24.253837] (-) TimerEvent: {}
+[24.357342] (-) TimerEvent: {}
+[24.458693] (-) TimerEvent: {}
+[24.559757] (-) TimerEvent: {}
+[24.661720] (-) TimerEvent: {}
+[24.775884] (-) TimerEvent: {}
+[24.878494] (-) TimerEvent: {}
+[24.981729] (-) TimerEvent: {}
+[25.086592] (-) TimerEvent: {}
+[25.188625] (-) TimerEvent: {}
+[25.292221] (-) TimerEvent: {}
+[25.399585] (-) TimerEvent: {}
+[25.501103] (-) TimerEvent: {}
+[25.604633] (-) TimerEvent: {}
+[25.707323] (-) TimerEvent: {}
+[25.811420] (-) TimerEvent: {}
+[25.918629] (-) TimerEvent: {}
+[26.020762] (-) TimerEvent: {}
+[26.106736] (planar_arm_moveit_config) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[26.107457] (planar_arm_moveit_config) StderrLine: {'line': b'  File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>\n'}
+[26.107691] (planar_arm_moveit_config) StderrLine: {'line': b'    main()\n'}
+[26.107850] (planar_arm_moveit_config) StderrLine: {'line': b'  File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main\n'}
+[26.108002] (planar_arm_moveit_config) StderrLine: {'line': b'    raise e\n'}
+[26.108127] (planar_arm_moveit_config) StderrLine: {'line': b'  File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main\n'}
+[26.108388] (planar_arm_moveit_config) StderrLine: {'line': b'    package = parse_package_string(\n'}
+[26.108668] (planar_arm_moveit_config) StderrLine: {'line': b'              ^^^^^^^^^^^^^^^^^^^^^\n'}
+[26.108929] (planar_arm_moveit_config) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 788, in parse_package_string\n'}
+[26.109136] (planar_arm_moveit_config) StderrLine: {'line': b'    pkg.validate(warnings=warnings)\n'}
+[26.136389] (-) TimerEvent: {}
+[26.137372] (planar_arm_moveit_config) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 330, in validate\n'}
+[26.138326] (planar_arm_moveit_config) StderrLine: {'line': b"    raise InvalidPackage('\\n'.join(errors), self.filename)\n"}
+[26.138773] (planar_arm_moveit_config) StderrLine: {'line': b"catkin_pkg.package.InvalidPackage: Error(s) in package '/home/groep8/rs2_ws/src/planar_arm_moveit_config/package.xml':\n"}
+[26.139069] (planar_arm_moveit_config) StderrLine: {'line': b'Invalid email "" for person ""\n'}
+[26.139464] (planar_arm_moveit_config) StderrLine: {'line': b'Maintainers must have an email address\n'}
+[26.139699] (planar_arm_moveit_config) StderrLine: {'line': b'Invalid email "" for person ""\n'}
+[26.239778] (-) TimerEvent: {}
+[26.345826] (-) TimerEvent: {}
+[26.450539] (-) TimerEvent: {}
+[26.470128] (planar_arm_moveit_config) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):\n'}
+[26.470768] (planar_arm_moveit_config) StderrLine: {'line': b'  execute_process(/usr/bin/python3\n'}
+[26.470981] (planar_arm_moveit_config) StderrLine: {'line': b'  /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py\n'}
+[26.471197] (planar_arm_moveit_config) StderrLine: {'line': b'  /home/groep8/rs2_ws/src/planar_arm_moveit_config/package.xml\n'}
+[26.471462] (planar_arm_moveit_config) StderrLine: {'line': b'  /home/groep8/rs2_ws/build/planar_arm_moveit_config/ament_cmake_core/package.cmake)\n'}
+[26.471728] (planar_arm_moveit_config) StderrLine: {'line': b'  returned error code 1\n'}
+[26.471952] (planar_arm_moveit_config) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[26.472112] (planar_arm_moveit_config) StderrLine: {'line': b'  /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[26.473548] (planar_arm_moveit_config) StderrLine: {'line': b'  /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)\n'}
+[26.474070] (planar_arm_moveit_config) StderrLine: {'line': b'  CMakeLists.txt:6 (ament_package)\n'}
+[26.474210] (planar_arm_moveit_config) StderrLine: {'line': b'\n'}
+[26.474424] (planar_arm_moveit_config) StderrLine: {'line': b'\x1b[0m\n'}
+[26.474598] (planar_arm_moveit_config) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[26.509196] (planar_arm_moveit_config) CommandEnded: {'returncode': 1}
+[26.511012] (planar_arm_moveit_config) JobEnded: {'identifier': 'planar_arm_moveit_config', 'rc': 1}
+[26.525567] (-) EventReactorShutdown: {}

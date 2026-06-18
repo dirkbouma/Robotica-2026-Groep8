@@ -1,0 +1,25 @@
+[0.731s] Invoking command in '/home/groep8/rs2_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_servo_control:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/home/groep8/rs2_ws/install/aardbeien_detectie:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/groep8/rs2_ws/build/my_robot_description -- -j4 -l4
+[1.295s] Invoked command in '/home/groep8/rs2_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_servo_control:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/home/groep8/rs2_ws/install/aardbeien_detectie:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/groep8/rs2_ws/build/my_robot_description -- -j4 -l4
+[1.321s] Invoking command in '/home/groep8/rs2_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_servo_control:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/home/groep8/rs2_ws/install/aardbeien_detectie:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/groep8/rs2_ws/build/my_robot_description
+[1.780s] -- Install configuration: ""
+[1.781s] -- Execute custom install script
+[1.781s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/launch/display.launch.py
+[1.781s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/urdf/hogpie.urdf.xacro
+[1.781s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/urdf/robot.urdf
+[1.781s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/urdf/robot.urdf.xacro
+[1.781s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/ament_index/resource_index/package_run_dependencies/my_robot_description
+[1.781s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/ament_index/resource_index/parent_prefix_path/my_robot_description
+[1.782s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/environment/ament_prefix_path.sh
+[1.782s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/environment/ament_prefix_path.dsv
+[1.782s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/environment/path.sh
+[1.782s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/environment/path.dsv
+[1.783s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/local_setup.bash
+[1.783s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/local_setup.sh
+[1.783s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/local_setup.zsh
+[1.783s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/local_setup.dsv
+[1.784s] -- Symlinking: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/package.dsv
+[1.784s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/ament_index/resource_index/packages/my_robot_description
+[1.784s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/cmake/my_robot_descriptionConfig.cmake
+[1.784s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/cmake/my_robot_descriptionConfig-version.cmake
+[1.784s] -- Up-to-date symlink: /home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/package.xml
+[1.791s] Invoked command in '/home/groep8/rs2_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_servo_control:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/home/groep8/rs2_ws/install/aardbeien_detectie:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/groep8/rs2_ws/build/my_robot_description

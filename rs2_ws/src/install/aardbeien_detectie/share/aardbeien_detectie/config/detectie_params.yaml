@@ -1,0 +1,12 @@
+aardbeien_detectie:
+  ros__parameters:
+    recamera_ip:     "192.168.42.1"
+    recamera_user:   "admin"
+    recamera_pass:   "admin"
+    ffmpeg_path:     "ffmpeg"
+    target_fps:      30
+    stream_naar_pi2: false
+    pi2_ip:          "141.252.29.81"
+    pi2_port:        5000
+    debug:           false
+    debug_schijf:    false

@@ -1,0 +1,18 @@
+[2.555s] Invoking command in '/home/groep8/rs2_ws/src/hogpie_arm_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/src/build/hogpie_arm_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/src/install/hogpie_arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/hogpie_arm_description build --build-base /home/groep8/rs2_ws/src/build/hogpie_arm_description/build install --record /home/groep8/rs2_ws/src/build/hogpie_arm_description/install.log --single-version-externally-managed install_data
+[3.229s] running egg_info
+[3.273s] writing ../build/hogpie_arm_description/hogpie_arm_description.egg-info/PKG-INFO
+[3.275s] writing dependency_links to ../build/hogpie_arm_description/hogpie_arm_description.egg-info/dependency_links.txt
+[3.278s] writing requirements to ../build/hogpie_arm_description/hogpie_arm_description.egg-info/requires.txt
+[3.279s] writing top-level names to ../build/hogpie_arm_description/hogpie_arm_description.egg-info/top_level.txt
+[3.369s] reading manifest file '../build/hogpie_arm_description/hogpie_arm_description.egg-info/SOURCES.txt'
+[3.369s] writing manifest file '../build/hogpie_arm_description/hogpie_arm_description.egg-info/SOURCES.txt'
+[3.369s] running build
+[3.369s] running build_py
+[3.369s] running install
+[3.384s] running install_lib
+[3.431s] running install_data
+[3.437s] running install_egg_info
+[3.478s] removing '/home/groep8/rs2_ws/src/install/hogpie_arm_description/lib/python3.12/site-packages/hogpie_arm_description-0.0.0-py3.12.egg-info' (and everything under it)
+[3.480s] Copying ../build/hogpie_arm_description/hogpie_arm_description.egg-info to /home/groep8/rs2_ws/src/install/hogpie_arm_description/lib/python3.12/site-packages/hogpie_arm_description-0.0.0-py3.12.egg-info
+[3.480s] running install_scripts
+[3.798s] writing list of installed files to '/home/groep8/rs2_ws/src/build/hogpie_arm_description/install.log'

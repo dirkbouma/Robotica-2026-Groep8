@@ -1,0 +1,3 @@
+[console_scripts]
+fake_joint_state_publisher = hogpie_arm_driver.fake_joint_state_publisher:main
+trajectory_server = hogpie_arm_driver.trajectory_server:main

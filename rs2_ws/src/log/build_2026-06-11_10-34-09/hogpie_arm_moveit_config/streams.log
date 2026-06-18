@@ -1,0 +1,60 @@
+[0.074s] Invoking command in '/home/groep8/rs2_ws/src/build/hogpie_arm_moveit_config': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/src/install/hogpie_arm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/src/install/hogpie_arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/groep8/rs2_ws/src/hogpie_arm_moveit_config -DCMAKE_INSTALL_PREFIX=/home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config
+[1.120s] -- The C compiler identification is GNU 13.3.0
+[2.017s] -- The CXX compiler identification is GNU 13.3.0
+[2.196s] -- Detecting C compiler ABI info
+[2.885s] -- Detecting C compiler ABI info - done
+[2.951s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.958s] -- Detecting C compile features
+[2.960s] -- Detecting C compile features - done
+[3.033s] -- Detecting CXX compiler ABI info
+[3.613s] -- Detecting CXX compiler ABI info - done
+[3.668s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.669s] -- Detecting CXX compile features
+[3.669s] -- Detecting CXX compile features - done
+[3.713s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[4.458s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[5.710s] -- Configuring done (5.6s)
+[5.726s] -- Generating done (0.0s)
+[5.739s] -- Build files have been written to: /home/groep8/rs2_ws/src/build/hogpie_arm_moveit_config
+[5.787s] Invoked command in '/home/groep8/rs2_ws/src/build/hogpie_arm_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/src/install/hogpie_arm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/src/install/hogpie_arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/groep8/rs2_ws/src/hogpie_arm_moveit_config -DCMAKE_INSTALL_PREFIX=/home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config
+[5.799s] Invoking command in '/home/groep8/rs2_ws/src/build/hogpie_arm_moveit_config': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/src/install/hogpie_arm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/src/install/hogpie_arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/groep8/rs2_ws/src/build/hogpie_arm_moveit_config -- -j4 -l4
+[6.005s] Invoked command in '/home/groep8/rs2_ws/src/build/hogpie_arm_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/src/install/hogpie_arm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/src/install/hogpie_arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/groep8/rs2_ws/src/build/hogpie_arm_moveit_config -- -j4 -l4
+[6.009s] Invoking command in '/home/groep8/rs2_ws/src/build/hogpie_arm_moveit_config': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/src/install/hogpie_arm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/src/install/hogpie_arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/groep8/rs2_ws/src/build/hogpie_arm_moveit_config
+[6.057s] -- Install configuration: ""
+[6.058s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/ament_index/resource_index/package_run_dependencies/hogpie_arm_moveit_config
+[6.060s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/ament_index/resource_index/parent_prefix_path/hogpie_arm_moveit_config
+[6.065s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/environment/ament_prefix_path.sh
+[6.069s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/environment/ament_prefix_path.dsv
+[6.069s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/environment/path.sh
+[6.070s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/environment/path.dsv
+[6.070s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/local_setup.bash
+[6.070s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/local_setup.sh
+[6.071s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/local_setup.zsh
+[6.071s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/local_setup.dsv
+[6.071s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/package.dsv
+[6.071s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/ament_index/resource_index/packages/hogpie_arm_moveit_config
+[6.076s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/cmake/hogpie_arm_moveit_configConfig.cmake
+[6.077s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/cmake/hogpie_arm_moveit_configConfig-version.cmake
+[6.077s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/package.xml
+[6.079s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/launch
+[6.085s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/launch/move_group.launch.py
+[6.085s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/launch/static_virtual_joint_tfs.launch.py
+[6.086s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/launch/warehouse_db.launch.py
+[6.086s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/launch/setup_assistant.launch.py
+[6.086s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/launch/moveit_rviz.launch.py
+[6.086s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/launch/spawn_controllers.launch.py
+[6.086s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/launch/demo.launch.py
+[6.086s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/launch/rsp.launch.py
+[6.093s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/config
+[6.097s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/config/joint_limits.yaml
+[6.098s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/config/moveit.rviz
+[6.098s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/config/hogpie_arm.urdf.xacro
+[6.098s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/config/ros2_controllers.yaml
+[6.098s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/config/moveit_controllers.yaml
+[6.098s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/config/kinematics.yaml
+[6.099s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/config/hogpie_arm.srdf
+[6.099s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/config/pilz_cartesian_limits.yaml
+[6.099s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/config/initial_positions.yaml
+[6.099s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/config/hogpie_arm.ros2_control.xacro
+[6.099s] -- Installing: /home/groep8/rs2_ws/src/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/.setup_assistant
+[6.116s] Invoked command in '/home/groep8/rs2_ws/src/build/hogpie_arm_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/src/install/hogpie_arm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/src/install/hogpie_arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/groep8/rs2_ws/src/build/hogpie_arm_moveit_config

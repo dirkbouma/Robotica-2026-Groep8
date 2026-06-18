@@ -1,0 +1,22 @@
+[1.958s] Invoking command in '/home/groep8/rs2_ws/src/test_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/src/build/test_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/src/install/test_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/test_pkg build --build-base /home/groep8/rs2_ws/src/build/test_pkg/build install --record /home/groep8/rs2_ws/src/build/test_pkg/install.log --single-version-externally-managed install_data
+[2.388s] running egg_info
+[2.417s] writing ../build/test_pkg/test_pkg.egg-info/PKG-INFO
+[2.417s] writing dependency_links to ../build/test_pkg/test_pkg.egg-info/dependency_links.txt
+[2.420s] writing entry points to ../build/test_pkg/test_pkg.egg-info/entry_points.txt
+[2.424s] writing requirements to ../build/test_pkg/test_pkg.egg-info/requires.txt
+[2.424s] writing top-level names to ../build/test_pkg/test_pkg.egg-info/top_level.txt
+[2.481s] reading manifest file '../build/test_pkg/test_pkg.egg-info/SOURCES.txt'
+[2.481s] adding license file 'LICENSE'
+[2.485s] writing manifest file '../build/test_pkg/test_pkg.egg-info/SOURCES.txt'
+[2.485s] running build
+[2.485s] running build_py
+[2.486s] running install
+[2.497s] running install_lib
+[2.526s] running install_data
+[2.527s] running install_egg_info
+[2.556s] removing '/home/groep8/rs2_ws/src/install/test_pkg/lib/python3.12/site-packages/test_pkg-0.0.0-py3.12.egg-info' (and everything under it)
+[2.557s] Copying ../build/test_pkg/test_pkg.egg-info to /home/groep8/rs2_ws/src/install/test_pkg/lib/python3.12/site-packages/test_pkg-0.0.0-py3.12.egg-info
+[2.558s] running install_scripts
+[2.792s] Installing test_node script to /home/groep8/rs2_ws/src/install/test_pkg/lib/test_pkg
+[2.793s] writing list of installed files to '/home/groep8/rs2_ws/src/build/test_pkg/install.log'
+[2.928s] Invoked command in '/home/groep8/rs2_ws/src/test_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/src/build/test_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/src/install/test_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/test_pkg build --build-base /home/groep8/rs2_ws/src/build/test_pkg/build install --record /home/groep8/rs2_ws/src/build/test_pkg/install.log --single-version-externally-managed install_data

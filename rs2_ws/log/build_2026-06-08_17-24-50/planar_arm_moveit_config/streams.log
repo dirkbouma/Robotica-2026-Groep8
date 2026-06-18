@@ -1,0 +1,46 @@
+[0.030s] Invoking command in '/home/groep8/rs2_ws/build/planar_arm_moveit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/groep8/rs2_ws/src/planar_arm_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/groep8/rs2_ws/install/planar_arm_moveit_config
+[0.108s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.160s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.655s] -- Configuring done (1.6s)
+[1.675s] -- Generating done (0.0s)
+[1.679s] -- Build files have been written to: /home/groep8/rs2_ws/build/planar_arm_moveit_config
+[1.689s] Invoked command in '/home/groep8/rs2_ws/build/planar_arm_moveit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/groep8/rs2_ws/src/planar_arm_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/groep8/rs2_ws/install/planar_arm_moveit_config
+[1.696s] Invoking command in '/home/groep8/rs2_ws/build/planar_arm_moveit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/groep8/rs2_ws/build/planar_arm_moveit_config -- -j4 -l4
+[1.881s] Invoked command in '/home/groep8/rs2_ws/build/planar_arm_moveit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/groep8/rs2_ws/build/planar_arm_moveit_config -- -j4 -l4
+[1.882s] Invoking command in '/home/groep8/rs2_ws/build/planar_arm_moveit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/groep8/rs2_ws/build/planar_arm_moveit_config
+[1.932s] -- Install configuration: ""
+[1.941s] -- Execute custom install script
+[1.945s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/ament_index/resource_index/package_run_dependencies/planar_arm_moveit_config
+[1.988s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/ament_index/resource_index/parent_prefix_path/planar_arm_moveit_config
+[2.041s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/environment/ament_prefix_path.sh
+[2.096s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/environment/ament_prefix_path.dsv
+[2.173s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/environment/path.sh
+[2.231s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/environment/path.dsv
+[2.268s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/local_setup.bash
+[2.319s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/local_setup.sh
+[2.365s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/local_setup.zsh
+[2.410s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/local_setup.dsv
+[2.479s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/package.dsv
+[2.578s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/ament_index/resource_index/packages/planar_arm_moveit_config
+[2.657s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/cmake/planar_arm_moveit_configConfig.cmake
+[2.724s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/cmake/planar_arm_moveit_configConfig-version.cmake
+[2.816s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/package.xml
+[2.870s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/demo.launch.py
+[2.920s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/move_group.launch.py
+[2.988s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/moveit_rviz.launch.py
+[3.048s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/rsp.launch.py
+[3.105s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/setup_assistant.launch.py
+[3.152s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/spawn_controllers.launch.py
+[3.199s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/static_virtual_joint_tfs.launch.py
+[3.250s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/warehouse_db.launch.py
+[3.295s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/initial_positions.yaml
+[3.336s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/joint_limits.yaml
+[3.395s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/kinematics.yaml
+[3.463s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/moveit.rviz
+[3.556s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/moveit_controllers.yaml
+[3.650s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/pilz_cartesian_limits.yaml
+[3.729s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/planar_arm.ros2_control.xacro
+[3.802s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/planar_arm.srdf
+[3.891s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/planar_arm.urdf.xacro
+[3.968s] -- Symlinking: /home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/.setup_assistant
+[4.072s] Invoked command in '/home/groep8/rs2_ws/build/planar_arm_moveit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/groep8/rs2_ws/build/planar_arm_moveit_config

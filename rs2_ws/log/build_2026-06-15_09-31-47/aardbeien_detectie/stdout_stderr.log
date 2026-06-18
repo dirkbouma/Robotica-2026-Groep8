@@ -1,0 +1,17 @@
+running egg_info
+writing ../../build/aardbeien_detectie/aardbeien_detectie.egg-info/PKG-INFO
+writing dependency_links to ../../build/aardbeien_detectie/aardbeien_detectie.egg-info/dependency_links.txt
+writing entry points to ../../build/aardbeien_detectie/aardbeien_detectie.egg-info/entry_points.txt
+writing requirements to ../../build/aardbeien_detectie/aardbeien_detectie.egg-info/requires.txt
+writing top-level names to ../../build/aardbeien_detectie/aardbeien_detectie.egg-info/top_level.txt
+reading manifest file '../../build/aardbeien_detectie/aardbeien_detectie.egg-info/SOURCES.txt'
+writing manifest file '../../build/aardbeien_detectie/aardbeien_detectie.egg-info/SOURCES.txt'
+running build
+running install
+running install_data
+running install_egg_info
+removing '/home/groep8/rs2_ws/install/aardbeien_detectie/lib/python3.12/site-packages/aardbeien_detectie-1.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/aardbeien_detectie/aardbeien_detectie.egg-info to /home/groep8/rs2_ws/install/aardbeien_detectie/lib/python3.12/site-packages/aardbeien_detectie-1.0.0-py3.12.egg-info
+running install_scripts
+Installing detectie_node script to /home/groep8/rs2_ws/install/aardbeien_detectie/lib/aardbeien_detectie
+writing list of installed files to '/home/groep8/rs2_ws/build/aardbeien_detectie/install.log'

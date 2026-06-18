@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+
+<robot name="planar_arm_elevator">
+
+  <!-- ====================================================== -->
+  <!-- BASE -->
+  <!-- ====================================================== -->
+
+  <link name="base_link">
+
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.21"/>
+      </geometry>
+      <origin xyz="0 0 0.105"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <box size="0.03 0.03 0.21"/>
+      </geometry>
+      <origin xyz="0 0 0.105"/>
+    </collision>
+
+  </link>
+
+  <!-- ====================================================== -->
+  <!-- FIXED ELEVATOR COLUMN -->
+  <!-- ====================================================== -->
+
+  <link name="column_link">
+
+    <visual>
+      <geometry>
+        <box size="0.03 0.03 0.176"/>
+      </geometry>
+      <origin xyz="0 0 0.088"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <box size="0.03 0.03 0.176"/>
+      </geometry>
+      <origin xyz="0 0 0.088"/>
+    </collision>
+
+  </link>
+
+  <joint name="column_fixed_joint" type="fixed">
+
+    <parent link="base_link"/>
+    <child link="column_link"/>
+
+    <!-- top of base -->
+    <origin xyz="0 0 0.21"/>
+
+  </joint>
+
+  <!-- ====================================================== -->
+  <!-- MOVING CARRIAGE -->
+  <!-- ====================================================== -->
+
+  <link name="carriage_link">
+
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.046"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.046"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+  <!-- ====================================================== -->
+  <!-- ELEVATOR -->
+  <!-- ====================================================== -->
+
+  <joint name="lift_joint" type="prismatic">
+
+    <parent link="column_link"/>
+    <child link="carriage_link"/>
+
+    <origin xyz="0 0 0"/>
+
+    <axis xyz="0 0 1"/>
+
+    <limit
+      lower="0.0"
+      upper="0.176"
+      effort="50.0"
+      velocity="0.10"/>
+
+  </joint>
+
+  <!-- ====================================================== -->
+  <!-- LINK 1 -->
+  <!-- ====================================================== -->
+
+  <link name="link1">
+
+    <visual>
+      <geometry>
+        <box size="0.153 0.022 0.046"/>
+      </geometry>
+      <origin xyz="0.0765 0 0"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <box size="0.153 0.022 0.046"/>
+      </geometry>
+      <origin xyz="0.0765 0 0"/>
+    </collision>
+
+  </link>
+
+  <!-- ====================================================== -->
+  <!-- JOINT 1 -->
+  <!-- ====================================================== -->
+
+  <joint name="joint1" type="revolute">
+
+    <parent link="carriage_link"/>
+    <child link="link1"/>
+
+    <origin xyz="0 0 0"/>
+
+    <axis xyz="0 0 1"/>
+
+    <limit
+      lower="-2.6"
+      upper="2.6"
+      effort="5.0"
+      velocity="1.0"/>
+
+  </joint>
+
+  <!-- ====================================================== -->
+  <!-- LINK 2 -->
+  <!-- ====================================================== -->
+
+  <link name="link2">
+
+    <visual>
+      <geometry>
+        <box size="0.153 0.022 0.046"/>
+      </geometry>
+      <origin xyz="0.0765 0 0"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <box size="0.153 0.022 0.046"/>
+      </geometry>
+      <origin xyz="0.0765 0 0"/>
+    </collision>
+
+  </link>
+
+  <!-- ====================================================== -->
+  <!-- JOINT 2 -->
+  <!-- ====================================================== -->
+
+  <joint name="joint2" type="revolute">
+
+    <parent link="link1"/>
+    <child link="link2"/>
+
+    <origin xyz="0.153 0 0"/>
+
+    <axis xyz="0 0 1"/>
+
+    <limit
+      lower="-2.6"
+      upper="2.6"
+      effort="5.0"
+      velocity="1.0"/>
+
+  </joint>
+
+  <!-- ====================================================== -->
+  <!-- TOOL -->
+  <!-- ====================================================== -->
+
+  <link name="tool_link">
+
+    <visual>
+      <geometry>
+        <box size="0.043 0.022 0.046"/>
+      </geometry>
+      <origin xyz="0.0215 0 0"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <box size="0.043 0.022 0.046"/>
+      </geometry>
+      <origin xyz="0.0215 0 0"/>
+    </collision>
+
+  </link>
+
+  <!-- ====================================================== -->
+  <!-- JOINT 3 -->
+  <!-- ====================================================== -->
+
+  <joint name="joint3" type="revolute">
+
+    <parent link="link2"/>
+    <child link="tool_link"/>
+
+    <origin xyz="0.153 0 0"/>
+
+    <axis xyz="0 0 1"/>
+
+    <limit
+      lower="-2.6"
+      upper="2.6"
+      effort="5.0"
+      velocity="1.0"/>
+
+  </joint>
+
+</robot>

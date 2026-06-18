@@ -1,0 +1,8 @@
+[console_scripts]
+data_converter = hogpie_controller_sensors.controller_data_reform:main
+ik_test = hogpie_controller_sensors.ik_test:main
+moveit_commander = hogpie_controller_sensors.moveit_pose_commander:main
+pose_test = hogpie_controller_sensors.hogpie_pose_test:main
+tcp_arm_controller = hogpie_controller_sensors.tcp_arm_controller:main
+tcp_listener = hogpie_controller_sensors.controller_sensors_input:main
+workspace_scan = hogpie_controller_sensors.workspace_scan:main

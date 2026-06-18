@@ -1,0 +1,19 @@
+[4.636s] Invoking command in '/home/groep8/rs2_ws/src/hogpie_arm_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_arm_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_arm_description build --build-base /home/groep8/rs2_ws/build/hogpie_arm_description/build install --record /home/groep8/rs2_ws/build/hogpie_arm_description/install.log --single-version-externally-managed install_data
+[5.821s] running egg_info
+[5.927s] writing ../../build/hogpie_arm_description/hogpie_arm_description.egg-info/PKG-INFO
+[5.931s] writing dependency_links to ../../build/hogpie_arm_description/hogpie_arm_description.egg-info/dependency_links.txt
+[5.936s] writing requirements to ../../build/hogpie_arm_description/hogpie_arm_description.egg-info/requires.txt
+[5.936s] writing top-level names to ../../build/hogpie_arm_description/hogpie_arm_description.egg-info/top_level.txt
+[6.100s] reading manifest file '../../build/hogpie_arm_description/hogpie_arm_description.egg-info/SOURCES.txt'
+[6.106s] writing manifest file '../../build/hogpie_arm_description/hogpie_arm_description.egg-info/SOURCES.txt'
+[6.109s] running build
+[6.110s] running build_py
+[6.110s] running install
+[6.139s] running install_lib
+[6.194s] running install_data
+[6.194s] running install_egg_info
+[6.239s] removing '/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages/hogpie_arm_description-0.0.0-py3.12.egg-info' (and everything under it)
+[6.246s] Copying ../../build/hogpie_arm_description/hogpie_arm_description.egg-info to /home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages/hogpie_arm_description-0.0.0-py3.12.egg-info
+[6.246s] running install_scripts
+[6.857s] writing list of installed files to '/home/groep8/rs2_ws/build/hogpie_arm_description/install.log'
+[7.164s] Invoked command in '/home/groep8/rs2_ws/src/hogpie_arm_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_arm_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_arm_description build --build-base /home/groep8/rs2_ws/build/hogpie_arm_description/build install --record /home/groep8/rs2_ws/build/hogpie_arm_description/install.log --single-version-externally-managed install_data

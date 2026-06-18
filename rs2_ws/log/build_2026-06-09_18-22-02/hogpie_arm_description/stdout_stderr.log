@@ -1,0 +1,18 @@
+running egg_info
+writing ../../build/hogpie_arm_description/hogpie_arm_description.egg-info/PKG-INFO
+writing dependency_links to ../../build/hogpie_arm_description/hogpie_arm_description.egg-info/dependency_links.txt
+writing requirements to ../../build/hogpie_arm_description/hogpie_arm_description.egg-info/requires.txt
+writing top-level names to ../../build/hogpie_arm_description/hogpie_arm_description.egg-info/top_level.txt
+reading manifest file '../../build/hogpie_arm_description/hogpie_arm_description.egg-info/SOURCES.txt'
+writing manifest file '../../build/hogpie_arm_description/hogpie_arm_description.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying urdf/hogpie_arm_description.urdf -> /home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description/urdf
+running install_egg_info
+removing '/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages/hogpie_arm_description-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/hogpie_arm_description/hogpie_arm_description.egg-info to /home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages/hogpie_arm_description-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/groep8/rs2_ws/build/hogpie_arm_description/install.log'

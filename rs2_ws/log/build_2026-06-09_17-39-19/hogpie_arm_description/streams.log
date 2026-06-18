@@ -1,0 +1,16 @@
+[1.790s] Invoking command in '/home/groep8/rs2_ws/src/hogpie_arm_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_arm_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_arm_description build --build-base /home/groep8/rs2_ws/build/hogpie_arm_description/build install --record /home/groep8/rs2_ws/build/hogpie_arm_description/install.log --single-version-externally-managed install_data
+[2.234s] running egg_info
+[2.265s] writing ../../build/hogpie_arm_description/hogpie_arm_description.egg-info/PKG-INFO
+[2.266s] writing dependency_links to ../../build/hogpie_arm_description/hogpie_arm_description.egg-info/dependency_links.txt
+[2.272s] writing requirements to ../../build/hogpie_arm_description/hogpie_arm_description.egg-info/requires.txt
+[2.273s] writing top-level names to ../../build/hogpie_arm_description/hogpie_arm_description.egg-info/top_level.txt
+[2.336s] reading manifest file '../../build/hogpie_arm_description/hogpie_arm_description.egg-info/SOURCES.txt'
+[2.337s] writing manifest file '../../build/hogpie_arm_description/hogpie_arm_description.egg-info/SOURCES.txt'
+[2.337s] running build
+[2.337s] running build_py
+[2.338s] running install
+[2.348s] running install_lib
+[2.378s] error: can't copy 'urdf/hogpie_arm_elevator.urdf': doesn't exist or not a regular file
+[2.378s] running install_data
+[2.379s] creating /home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description/urdf
+[2.462s] Invoked command in '/home/groep8/rs2_ws/src/hogpie_arm_description' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_arm_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_arm_description build --build-base /home/groep8/rs2_ws/build/hogpie_arm_description/build install --record /home/groep8/rs2_ws/build/hogpie_arm_description/install.log --single-version-externally-managed install_data

@@ -1,0 +1,17 @@
+running egg_info
+creating ../build/aardbeien_detectie/aardbeien_detectie.egg-info
+writing ../build/aardbeien_detectie/aardbeien_detectie.egg-info/PKG-INFO
+writing dependency_links to ../build/aardbeien_detectie/aardbeien_detectie.egg-info/dependency_links.txt
+writing entry points to ../build/aardbeien_detectie/aardbeien_detectie.egg-info/entry_points.txt
+writing requirements to ../build/aardbeien_detectie/aardbeien_detectie.egg-info/requires.txt
+writing top-level names to ../build/aardbeien_detectie/aardbeien_detectie.egg-info/top_level.txt
+writing manifest file '../build/aardbeien_detectie/aardbeien_detectie.egg-info/SOURCES.txt'
+reading manifest file '../build/aardbeien_detectie/aardbeien_detectie.egg-info/SOURCES.txt'
+writing manifest file '../build/aardbeien_detectie/aardbeien_detectie.egg-info/SOURCES.txt'
+running build
+running install
+running install_data
+creating /home/groep8/rs2_ws/src/install/aardbeien_detectie/share/ament_index
+creating /home/groep8/rs2_ws/src/install/aardbeien_detectie/share/ament_index/resource_index
+creating /home/groep8/rs2_ws/src/install/aardbeien_detectie/share/ament_index/resource_index/packages
+error: can't copy 'resource/aardbeien_detectie': doesn't exist or not a regular file

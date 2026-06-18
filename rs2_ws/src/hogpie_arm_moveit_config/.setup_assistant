@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: hogpie_arm_description
+    relative_path: urdf/hogpie_arm_description.urdf
+  srdf:
+    relative_path: config/hogpie_arm.srdf
+  package_settings:
+    author_name: ""
+    author_email: ""
+    generated_timestamp: 1781024395
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

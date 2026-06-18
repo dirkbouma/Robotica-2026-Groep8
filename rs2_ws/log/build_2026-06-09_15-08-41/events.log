@@ -1,0 +1,6 @@
+[0.000000] (-) TimerEvent: {}
+[0.000294] (-) JobUnselected: {'identifier': 'hogpie_controller_sensors'}
+[0.000517] (-) JobUnselected: {'identifier': 'my_robot_description'}
+[0.000743] (-) JobUnselected: {'identifier': 'planar_arm_moveit_config'}
+[0.001053] (-) JobUnselected: {'identifier': 'test_pkg'}
+[0.002619] (-) EventReactorShutdown: {}

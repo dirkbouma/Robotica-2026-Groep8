@@ -1,0 +1,1 @@
+/home/groep8/rs2_ws/src/planar_arm_moveit_config/launch/static_virtual_joint_tfs.launch.py

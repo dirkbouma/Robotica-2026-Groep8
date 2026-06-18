@@ -1,0 +1,19 @@
+[2.775s] Invoking command in '/home/groep8/rs2_ws/src/aardbeien_detectie': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/src/build/aardbeien_detectie/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/src/install/aardbeien_detectie/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/aardbeien_detectie build --build-base /home/groep8/rs2_ws/src/build/aardbeien_detectie/build install --record /home/groep8/rs2_ws/src/build/aardbeien_detectie/install.log --single-version-externally-managed install_data
+[3.325s] running egg_info
+[3.326s] creating ../build/aardbeien_detectie/aardbeien_detectie.egg-info
+[3.367s] writing ../build/aardbeien_detectie/aardbeien_detectie.egg-info/PKG-INFO
+[3.368s] writing dependency_links to ../build/aardbeien_detectie/aardbeien_detectie.egg-info/dependency_links.txt
+[3.370s] writing entry points to ../build/aardbeien_detectie/aardbeien_detectie.egg-info/entry_points.txt
+[3.371s] writing requirements to ../build/aardbeien_detectie/aardbeien_detectie.egg-info/requires.txt
+[3.373s] writing top-level names to ../build/aardbeien_detectie/aardbeien_detectie.egg-info/top_level.txt
+[3.376s] writing manifest file '../build/aardbeien_detectie/aardbeien_detectie.egg-info/SOURCES.txt'
+[3.427s] reading manifest file '../build/aardbeien_detectie/aardbeien_detectie.egg-info/SOURCES.txt'
+[3.429s] writing manifest file '../build/aardbeien_detectie/aardbeien_detectie.egg-info/SOURCES.txt'
+[3.431s] running build
+[3.433s] running install
+[3.451s] running install_data
+[3.451s] creating /home/groep8/rs2_ws/src/install/aardbeien_detectie/share/ament_index
+[3.451s] creating /home/groep8/rs2_ws/src/install/aardbeien_detectie/share/ament_index/resource_index
+[3.451s] creating /home/groep8/rs2_ws/src/install/aardbeien_detectie/share/ament_index/resource_index/packages
+[3.452s] error: can't copy 'resource/aardbeien_detectie': doesn't exist or not a regular file
+[3.607s] Invoked command in '/home/groep8/rs2_ws/src/aardbeien_detectie' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/src/build/aardbeien_detectie/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/src/install/aardbeien_detectie/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/aardbeien_detectie build --build-base /home/groep8/rs2_ws/src/build/aardbeien_detectie/build install --record /home/groep8/rs2_ws/src/build/aardbeien_detectie/install.log --single-version-externally-managed install_data

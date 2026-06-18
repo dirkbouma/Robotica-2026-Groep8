@@ -1,0 +1,28 @@
+[3.168s] Invoking command in '/home/groep8/rs2_ws/src/hogpie_servo_control': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_servo_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_servo_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_servo_control build --build-base /home/groep8/rs2_ws/build/hogpie_servo_control/build install --record /home/groep8/rs2_ws/build/hogpie_servo_control/install.log --single-version-externally-managed install_data
+[3.813s] running egg_info
+[3.845s] writing ../../build/hogpie_servo_control/hogpie_servo_control.egg-info/PKG-INFO
+[3.846s] writing dependency_links to ../../build/hogpie_servo_control/hogpie_servo_control.egg-info/dependency_links.txt
+[3.849s] writing entry points to ../../build/hogpie_servo_control/hogpie_servo_control.egg-info/entry_points.txt
+[3.849s] writing requirements to ../../build/hogpie_servo_control/hogpie_servo_control.egg-info/requires.txt
+[3.850s] writing top-level names to ../../build/hogpie_servo_control/hogpie_servo_control.egg-info/top_level.txt
+[3.916s] reading manifest file '../../build/hogpie_servo_control/hogpie_servo_control.egg-info/SOURCES.txt'
+[3.917s] writing manifest file '../../build/hogpie_servo_control/hogpie_servo_control.egg-info/SOURCES.txt'
+[3.917s] running build
+[3.917s] running build_py
+[3.918s] copying hogpie_servo_control/trajectory_executor_node.py -> /home/groep8/rs2_ws/build/hogpie_servo_control/build/lib/hogpie_servo_control
+[3.919s] running install
+[3.930s] running install_lib
+[3.961s] copying /home/groep8/rs2_ws/build/hogpie_servo_control/build/lib/hogpie_servo_control/trajectory_executor_node.py -> /home/groep8/rs2_ws/install/hogpie_servo_control/lib/python3.12/site-packages/hogpie_servo_control
+[3.964s] byte-compiling /home/groep8/rs2_ws/install/hogpie_servo_control/lib/python3.12/site-packages/hogpie_servo_control/trajectory_executor_node.py to trajectory_executor_node.cpython-312.pyc
+[3.967s] running install_data
+[3.967s] running install_egg_info
+[4.040s] removing '/home/groep8/rs2_ws/install/hogpie_servo_control/lib/python3.12/site-packages/hogpie_servo_control-0.0.0-py3.12.egg-info' (and everything under it)
+[4.042s] Copying ../../build/hogpie_servo_control/hogpie_servo_control.egg-info to /home/groep8/rs2_ws/install/hogpie_servo_control/lib/python3.12/site-packages/hogpie_servo_control-0.0.0-py3.12.egg-info
+[4.044s] running install_scripts
+[4.356s] Installing ax12_driver script to /home/groep8/rs2_ws/install/hogpie_servo_control/lib/hogpie_servo_control
+[4.357s] Installing encoder_jointstate script to /home/groep8/rs2_ws/install/hogpie_servo_control/lib/hogpie_servo_control
+[4.362s] Installing encoder_node script to /home/groep8/rs2_ws/install/hogpie_servo_control/lib/hogpie_servo_control
+[4.363s] Installing joints_controller script to /home/groep8/rs2_ws/install/hogpie_servo_control/lib/hogpie_servo_control
+[4.363s] Installing trajectory_executor script to /home/groep8/rs2_ws/install/hogpie_servo_control/lib/hogpie_servo_control
+[4.364s] writing list of installed files to '/home/groep8/rs2_ws/build/hogpie_servo_control/install.log'
+[4.530s] Invoked command in '/home/groep8/rs2_ws/src/hogpie_servo_control' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_servo_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_servo_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_servo_control build --build-base /home/groep8/rs2_ws/build/hogpie_servo_control/build install --record /home/groep8/rs2_ws/build/hogpie_servo_control/install.log --single-version-externally-managed install_data

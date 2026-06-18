@@ -1,0 +1,58 @@
+[0.000000] (-) TimerEvent: {}
+[0.000428] (-) JobUnselected: {'identifier': 'hogpie_arm_description'}
+[0.001173] (-) JobUnselected: {'identifier': 'hogpie_arm_moveit_config'}
+[0.001919] (-) JobUnselected: {'identifier': 'hogpie_controller_sensors'}
+[0.002539] (-) JobUnselected: {'identifier': 'my_robot_description'}
+[0.002732] (-) JobUnselected: {'identifier': 'planar_arm_moveit_config'}
+[0.002818] (hogpie_arm_driver) JobQueued: {'identifier': 'hogpie_arm_driver', 'dependencies': OrderedDict()}
+[0.002858] (hogpie_arm_driver) JobStarted: {'identifier': 'hogpie_arm_driver'}
+[0.099730] (-) TimerEvent: {}
+[0.200091] (-) TimerEvent: {}
+[0.300432] (-) TimerEvent: {}
+[0.400769] (-) TimerEvent: {}
+[0.501492] (-) TimerEvent: {}
+[0.601934] (-) TimerEvent: {}
+[0.702266] (-) TimerEvent: {}
+[0.802572] (-) TimerEvent: {}
+[0.902877] (-) TimerEvent: {}
+[1.003195] (-) TimerEvent: {}
+[1.103506] (-) TimerEvent: {}
+[1.203824] (-) TimerEvent: {}
+[1.304214] (-) TimerEvent: {}
+[1.355359] (hogpie_arm_driver) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/groep8/rs2_ws/build/hogpie_arm_driver/build', '--no-deps', 'symlink_data'], 'cwd': '/home/groep8/rs2_ws/build/hogpie_arm_driver', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2184-2-groep8-desktop_TIME608634', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'groep8', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/groep8/dxl_ws/install/dynamixel_sdk/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/groep8', 'OLDPWD': '/home/groep8/rs2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1929', 'SYSTEMD_EXEC_PID': '2184', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '5417', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/groep8/dxl_ws/install:/home/groep8/rs2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'groep8', 'JOURNAL_STREAM': '8:18972', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'groep8', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/groep8-desktop:@/tmp/.ICE-unix/2154,unix/groep8-desktop:/tmp/.ICE-unix/2154', 'INVOCATION_ID': '100fe66ac5354a2ebd00350c3b2ecf4e', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.WENYQ3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_moveit_config:/home/groep8/rs2_ws/install/hogpie_arm_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:4e0701fd-e6d5-48e8-99b5-d394d2fa047d', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/groep8/rs2_ws/build/hogpie_arm_driver', 'QT_QPA_PLATFORM': 'xcb', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/groep8/rs2_ws/build/hogpie_arm_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_arm_driver/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/test_pkg/lib/python3.12/site-packages:/home/groep8/rs2_ws/build/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/python3.12/site-packages:/home/groep8/rs2_ws/build/hogpie_arm_description:/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/rs2_ws/install/hogpie_arm_moveit_config:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[1.404308] (-) TimerEvent: {}
+[1.504650] (-) TimerEvent: {}
+[1.604977] (-) TimerEvent: {}
+[1.705313] (-) TimerEvent: {}
+[1.805627] (-) TimerEvent: {}
+[1.830866] (hogpie_arm_driver) StdoutLine: {'line': b'running develop\n'}
+[1.905734] (-) TimerEvent: {}
+[2.006049] (-) TimerEvent: {}
+[2.106375] (-) TimerEvent: {}
+[2.118613] (hogpie_arm_driver) StdoutLine: {'line': b'running egg_info\n'}
+[2.118890] (hogpie_arm_driver) StdoutLine: {'line': b'creating hogpie_arm_driver.egg-info\n'}
+[2.145360] (hogpie_arm_driver) StdoutLine: {'line': b'writing hogpie_arm_driver.egg-info/PKG-INFO\n'}
+[2.145809] (hogpie_arm_driver) StdoutLine: {'line': b'writing dependency_links to hogpie_arm_driver.egg-info/dependency_links.txt\n'}
+[2.146058] (hogpie_arm_driver) StdoutLine: {'line': b'writing entry points to hogpie_arm_driver.egg-info/entry_points.txt\n'}
+[2.146279] (hogpie_arm_driver) StdoutLine: {'line': b'writing requirements to hogpie_arm_driver.egg-info/requires.txt\n'}
+[2.146431] (hogpie_arm_driver) StdoutLine: {'line': b'writing top-level names to hogpie_arm_driver.egg-info/top_level.txt\n'}
+[2.146612] (hogpie_arm_driver) StdoutLine: {'line': b"writing manifest file 'hogpie_arm_driver.egg-info/SOURCES.txt'\n"}
+[2.199656] (hogpie_arm_driver) StdoutLine: {'line': b"reading manifest file 'hogpie_arm_driver.egg-info/SOURCES.txt'\n"}
+[2.200515] (hogpie_arm_driver) StdoutLine: {'line': b"writing manifest file 'hogpie_arm_driver.egg-info/SOURCES.txt'\n"}
+[2.206484] (-) TimerEvent: {}
+[2.242223] (hogpie_arm_driver) StdoutLine: {'line': b'running build_ext\n'}
+[2.242976] (hogpie_arm_driver) StdoutLine: {'line': b'Creating /home/groep8/rs2_ws/install/hogpie_arm_driver/lib/python3.12/site-packages/hogpie-arm-driver.egg-link (link to .)\n'}
+[2.244316] (hogpie_arm_driver) StdoutLine: {'line': b'Installing fake_joint_state_publisher script to /home/groep8/rs2_ws/install/hogpie_arm_driver/lib/hogpie_arm_driver\n'}
+[2.245400] (hogpie_arm_driver) StdoutLine: {'line': b'\n'}
+[2.246612] (hogpie_arm_driver) StdoutLine: {'line': b'Installed /home/groep8/rs2_ws/build/hogpie_arm_driver\n'}
+[2.247015] (hogpie_arm_driver) StdoutLine: {'line': b'running symlink_data\n'}
+[2.247209] (hogpie_arm_driver) StdoutLine: {'line': b'creating /home/groep8/rs2_ws/install/hogpie_arm_driver/share/ament_index\n'}
+[2.247394] (hogpie_arm_driver) StdoutLine: {'line': b'creating /home/groep8/rs2_ws/install/hogpie_arm_driver/share/ament_index/resource_index\n'}
+[2.247571] (hogpie_arm_driver) StdoutLine: {'line': b'creating /home/groep8/rs2_ws/install/hogpie_arm_driver/share/ament_index/resource_index/packages\n'}
+[2.247740] (hogpie_arm_driver) StdoutLine: {'line': b'symbolically linking /home/groep8/rs2_ws/build/hogpie_arm_driver/resource/hogpie_arm_driver -> /home/groep8/rs2_ws/install/hogpie_arm_driver/share/ament_index/resource_index/packages\n'}
+[2.247920] (hogpie_arm_driver) StdoutLine: {'line': b'symbolically linking /home/groep8/rs2_ws/build/hogpie_arm_driver/package.xml -> /home/groep8/rs2_ws/install/hogpie_arm_driver/share/hogpie_arm_driver\n'}
+[2.306677] (-) TimerEvent: {}
+[2.408032] (-) TimerEvent: {}
+[2.425512] (hogpie_arm_driver) CommandEnded: {'returncode': 0}
+[2.444831] (hogpie_arm_driver) JobEnded: {'identifier': 'hogpie_arm_driver', 'rc': 0}
+[2.446192] (-) EventReactorShutdown: {}

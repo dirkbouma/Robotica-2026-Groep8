@@ -1,0 +1,24 @@
+running egg_info
+writing ../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info/PKG-INFO
+writing dependency_links to ../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info/dependency_links.txt
+writing entry points to ../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info/entry_points.txt
+writing requirements to ../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info/requires.txt
+writing top-level names to ../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info/top_level.txt
+reading manifest file '../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info/SOURCES.txt'
+writing manifest file '../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/python3.12/site-packages/hogpie_controller_sensors-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/python3.12/site-packages/hogpie_controller_sensors-0.0.0-py3.12.egg-info
+running install_scripts
+Installing data_converter script to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/hogpie_controller_sensors
+Installing ik_test script to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/hogpie_controller_sensors
+Installing moveit_commander script to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/hogpie_controller_sensors
+Installing pose_test script to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/hogpie_controller_sensors
+Installing tcp_listener script to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/hogpie_controller_sensors
+Installing workspace_scan script to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/hogpie_controller_sensors
+writing list of installed files to '/home/groep8/rs2_ws/build/hogpie_controller_sensors/install.log'

@@ -1,0 +1,7 @@
+# Default initial positions for hogpie_arm's ros2_control fake system
+
+initial_positions:
+  joint1: 0
+  joint2: 0
+  joint3: 0
+  lift_joint: 0

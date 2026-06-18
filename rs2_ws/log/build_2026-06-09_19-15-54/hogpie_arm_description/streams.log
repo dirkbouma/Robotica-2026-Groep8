@@ -1,0 +1,19 @@
+[2.445s] Invoking command in '/home/groep8/rs2_ws/build/hogpie_arm_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_arm_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/groep8/rs2_ws/build/hogpie_arm_description/build --no-deps symlink_data --force
+[3.100s] running develop
+[3.393s] running egg_info
+[3.419s] writing hogpie_arm_description.egg-info/PKG-INFO
+[3.419s] writing dependency_links to hogpie_arm_description.egg-info/dependency_links.txt
+[3.420s] writing requirements to hogpie_arm_description.egg-info/requires.txt
+[3.421s] writing top-level names to hogpie_arm_description.egg-info/top_level.txt
+[3.478s] reading manifest file 'hogpie_arm_description.egg-info/SOURCES.txt'
+[3.479s] writing manifest file 'hogpie_arm_description.egg-info/SOURCES.txt'
+[3.514s] running build_ext
+[3.515s] Creating /home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages/hogpie-arm-description.egg-link (link to .)
+[3.519s] 
+[3.520s] Installed /home/groep8/rs2_ws/build/hogpie_arm_description
+[3.520s] running symlink_data
+[3.520s] symbolically linking /home/groep8/rs2_ws/build/hogpie_arm_description/resource/hogpie_arm_description -> /home/groep8/rs2_ws/install/hogpie_arm_description/share/ament_index/resource_index/packages
+[3.520s] symbolically linking /home/groep8/rs2_ws/build/hogpie_arm_description/package.xml -> /home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description
+[3.521s] symbolically linking /home/groep8/rs2_ws/build/hogpie_arm_description/urdf/hogpie_arm_description.urdf -> /home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description/urdf
+[3.521s] symbolically linking /home/groep8/rs2_ws/build/hogpie_arm_description/launch/display.launch.py -> /home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description/launch
+[3.734s] Invoked command in '/home/groep8/rs2_ws/build/hogpie_arm_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_arm_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/groep8/rs2_ws/build/hogpie_arm_description/build --no-deps symlink_data --force

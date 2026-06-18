@@ -1,0 +1,2 @@
+[console_scripts]
+ax12_driver = hogpie_servo_control.ax12_driver:main

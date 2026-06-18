@@ -1,0 +1,6 @@
+[console_scripts]
+ax12_driver = hogpie_servo_control.ax12_driver:main
+encoder_jointstate = hogpie_servo_control.encoder_jointstate_node:main
+encoder_node = hogpie_servo_control.as5600_encoder_node:main
+joints_controller = hogpie_servo_control.joints_controller_node:main
+trajectory_executor = hogpie_servo_control.trajectory_executor_node:main

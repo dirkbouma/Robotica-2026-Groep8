@@ -1,0 +1,29 @@
+[3.788s] Invoking command in '/home/groep8/rs2_ws/src/hogpie_controller_sensors': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_controller_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_controller_sensors build --build-base /home/groep8/rs2_ws/build/hogpie_controller_sensors/build install --record /home/groep8/rs2_ws/build/hogpie_controller_sensors/install.log --single-version-externally-managed install_data
+[4.969s] running egg_info
+[5.091s] writing ../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info/PKG-INFO
+[5.096s] writing dependency_links to ../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info/dependency_links.txt
+[5.096s] writing entry points to ../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info/entry_points.txt
+[5.097s] writing requirements to ../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info/requires.txt
+[5.109s] writing top-level names to ../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info/top_level.txt
+[5.268s] reading manifest file '../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info/SOURCES.txt'
+[5.272s] writing manifest file '../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info/SOURCES.txt'
+[5.272s] running build
+[5.273s] running build_py
+[5.277s] running install
+[5.299s] running install_lib
+[5.362s] running install_data
+[5.362s] running install_egg_info
+[5.401s] removing '/home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/python3.12/site-packages/hogpie_controller_sensors-0.0.0-py3.12.egg-info' (and everything under it)
+[5.402s] Copying ../../build/hogpie_controller_sensors/hogpie_controller_sensors.egg-info to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/python3.12/site-packages/hogpie_controller_sensors-0.0.0-py3.12.egg-info
+[5.405s] running install_scripts
+[5.742s] Installing IkOnly script to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/hogpie_controller_sensors
+[5.742s] Installing data_converter script to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/hogpie_controller_sensors
+[5.745s] Installing ik_test script to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/hogpie_controller_sensors
+[5.746s] Installing moveit_commander script to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/hogpie_controller_sensors
+[5.750s] Installing pose_backup script to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/hogpie_controller_sensors
+[5.751s] Installing pose_test script to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/hogpie_controller_sensors
+[5.751s] Installing tcp_arm_controller script to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/hogpie_controller_sensors
+[5.756s] Installing tcp_listener script to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/hogpie_controller_sensors
+[5.756s] Installing workspace_scan script to /home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/hogpie_controller_sensors
+[5.761s] writing list of installed files to '/home/groep8/rs2_ws/build/hogpie_controller_sensors/install.log'
+[5.985s] Invoked command in '/home/groep8/rs2_ws/src/hogpie_controller_sensors' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_controller_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_controller_sensors build --build-base /home/groep8/rs2_ws/build/hogpie_controller_sensors/build install --record /home/groep8/rs2_ws/build/hogpie_controller_sensors/install.log --single-version-externally-managed install_data

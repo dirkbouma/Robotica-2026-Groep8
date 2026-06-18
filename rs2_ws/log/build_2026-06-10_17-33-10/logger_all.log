@@ -1,0 +1,423 @@
+[0.164s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.164s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffff8f1c0c20>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff8f380920>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff8f380920>>, mixin_verb=('build',))
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.223s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/groep8/rs2_ws'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_description) by extensions ['ignore', 'ignore_ament_install']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_description) by extension 'ignore'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_description) by extension 'ignore_ament_install'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_description) by extensions ['colcon_pkg']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_description) by extension 'colcon_pkg'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_description) by extensions ['colcon_meta']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_description) by extension 'colcon_meta'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_description) by extensions ['ros']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_description) by extension 'ros'
+[0.270s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hogpie_arm_description' with type 'ros.ament_python' and name 'hogpie_arm_description'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_driver) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_driver) by extension 'ignore_ament_install'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_driver) by extensions ['colcon_pkg']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_driver) by extension 'colcon_pkg'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_driver) by extensions ['colcon_meta']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_driver) by extension 'colcon_meta'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_driver) by extensions ['ros']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_driver) by extension 'ros'
+[0.272s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hogpie_arm_driver' with type 'ros.ament_python' and name 'hogpie_arm_driver'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_moveit_config) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_moveit_config) by extension 'ignore_ament_install'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_moveit_config) by extensions ['colcon_pkg']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_moveit_config) by extension 'colcon_pkg'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_moveit_config) by extensions ['colcon_meta']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_moveit_config) by extension 'colcon_meta'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_moveit_config) by extensions ['ros']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_arm_moveit_config) by extension 'ros'
+[0.273s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hogpie_arm_moveit_config' with type 'ros.ament_cmake' and name 'hogpie_arm_moveit_config'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_controller_sensors) by extensions ['ignore', 'ignore_ament_install']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_controller_sensors) by extension 'ignore'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_controller_sensors) by extension 'ignore_ament_install'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_controller_sensors) by extensions ['colcon_pkg']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_controller_sensors) by extension 'colcon_pkg'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_controller_sensors) by extensions ['colcon_meta']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_controller_sensors) by extension 'colcon_meta'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_controller_sensors) by extensions ['ros']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/hogpie_controller_sensors) by extension 'ros'
+[0.275s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hogpie_controller_sensors' with type 'ros.ament_python' and name 'hogpie_controller_sensors'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extension 'ignore'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extension 'ignore_ament_install'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extensions ['colcon_pkg']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extension 'colcon_pkg'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extensions ['colcon_meta']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extension 'colcon_meta'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extensions ['ros']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_description) by extension 'ros'
+[0.276s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_robot_description' with type 'ros.ament_cmake' and name 'my_robot_description'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/planar_arm_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/planar_arm_moveit_config) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/planar_arm_moveit_config) by extension 'ignore_ament_install'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/planar_arm_moveit_config) by extensions ['colcon_pkg']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/planar_arm_moveit_config) by extension 'colcon_pkg'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/planar_arm_moveit_config) by extensions ['colcon_meta']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/planar_arm_moveit_config) by extension 'colcon_meta'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/planar_arm_moveit_config) by extensions ['ros']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/planar_arm_moveit_config) by extension 'ros'
+[0.277s] DEBUG:colcon.colcon_core.package_identification:Package 'src/planar_arm_moveit_config' with type 'ros.ament_cmake' and name 'planar_arm_moveit_config'
+[0.277s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.277s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.277s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.278s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.278s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.306s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/groep8/dxl_ws/install
+[0.306s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/groep8/rs2_ws/install
+[0.309s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 386 installed packages in /opt/ros/jazzy
+[0.312s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_description' build argument 'cmake_args' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_description' build argument 'cmake_target' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.387s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.387s] DEBUG:colcon.colcon_core.verb:Building package 'hogpie_arm_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/groep8/rs2_ws/build/hogpie_arm_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/groep8/rs2_ws/install/hogpie_arm_description', 'merge_install': False, 'path': '/home/groep8/rs2_ws/src/hogpie_arm_description', 'symlink_install': False, 'test_result_base': None}
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_driver' build argument 'cmake_args' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_driver' build argument 'cmake_target' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.388s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.388s] DEBUG:colcon.colcon_core.verb:Building package 'hogpie_arm_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/groep8/rs2_ws/build/hogpie_arm_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/groep8/rs2_ws/install/hogpie_arm_driver', 'merge_install': False, 'path': '/home/groep8/rs2_ws/src/hogpie_arm_driver', 'symlink_install': False, 'test_result_base': None}
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'hogpie_controller_sensors' build argument 'cmake_args' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'hogpie_controller_sensors' build argument 'cmake_target' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'hogpie_controller_sensors' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'hogpie_controller_sensors' build argument 'cmake_clean_cache' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'hogpie_controller_sensors' build argument 'cmake_clean_first' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'hogpie_controller_sensors' build argument 'cmake_force_configure' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'hogpie_controller_sensors' build argument 'ament_cmake_args' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'hogpie_controller_sensors' build argument 'catkin_cmake_args' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'hogpie_controller_sensors' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.389s] DEBUG:colcon.colcon_core.verb:Building package 'hogpie_controller_sensors' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/groep8/rs2_ws/build/hogpie_controller_sensors', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/groep8/rs2_ws/install/hogpie_controller_sensors', 'merge_install': False, 'path': '/home/groep8/rs2_ws/src/hogpie_controller_sensors', 'symlink_install': False, 'test_result_base': None}
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'cmake_args' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'cmake_target' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'my_robot_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.389s] DEBUG:colcon.colcon_core.verb:Building package 'my_robot_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/groep8/rs2_ws/build/my_robot_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/groep8/rs2_ws/install/my_robot_description', 'merge_install': False, 'path': '/home/groep8/rs2_ws/src/my_robot_description', 'symlink_install': False, 'test_result_base': None}
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_moveit_config' build argument 'cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_moveit_config' build argument 'cmake_target' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_moveit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_moveit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_moveit_config' build argument 'cmake_clean_first' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_moveit_config' build argument 'cmake_force_configure' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_moveit_config' build argument 'ament_cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_moveit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'hogpie_arm_moveit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.390s] DEBUG:colcon.colcon_core.verb:Building package 'hogpie_arm_moveit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/groep8/rs2_ws/build/hogpie_arm_moveit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config', 'merge_install': False, 'path': '/home/groep8/rs2_ws/src/hogpie_arm_moveit_config', 'symlink_install': False, 'test_result_base': None}
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'planar_arm_moveit_config' build argument 'cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'planar_arm_moveit_config' build argument 'cmake_target' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'planar_arm_moveit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'planar_arm_moveit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'planar_arm_moveit_config' build argument 'cmake_clean_first' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'planar_arm_moveit_config' build argument 'cmake_force_configure' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'planar_arm_moveit_config' build argument 'ament_cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'planar_arm_moveit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'planar_arm_moveit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.391s] DEBUG:colcon.colcon_core.verb:Building package 'planar_arm_moveit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/groep8/rs2_ws/build/planar_arm_moveit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/groep8/rs2_ws/install/planar_arm_moveit_config', 'merge_install': False, 'path': '/home/groep8/rs2_ws/src/planar_arm_moveit_config', 'symlink_install': False, 'test_result_base': None}
+[0.391s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.392s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.393s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/groep8/rs2_ws/src/hogpie_arm_description' with build type 'ament_python'
+[0.393s] Level 1:colcon.colcon_core.shell:create_environment_hook('hogpie_arm_description', 'ament_prefix_path')
+[0.397s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.398s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description/hook/ament_prefix_path.ps1'
+[0.400s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description/hook/ament_prefix_path.dsv'
+[0.403s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description/hook/ament_prefix_path.sh'
+[0.407s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.408s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.416s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/groep8/rs2_ws/src/my_robot_description' with build type 'ament_cmake'
+[0.417s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/groep8/rs2_ws/src/my_robot_description'
+[0.417s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.418s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.425s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/groep8/rs2_ws/src/hogpie_arm_driver' with build type 'ament_python'
+[0.425s] Level 1:colcon.colcon_core.shell:create_environment_hook('hogpie_arm_driver', 'ament_prefix_path')
+[0.425s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_arm_driver/share/hogpie_arm_driver/hook/ament_prefix_path.ps1'
+[0.426s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/groep8/rs2_ws/install/hogpie_arm_driver/share/hogpie_arm_driver/hook/ament_prefix_path.dsv'
+[0.427s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_arm_driver/share/hogpie_arm_driver/hook/ament_prefix_path.sh'
+[0.428s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.428s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.435s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/groep8/rs2_ws/src/hogpie_controller_sensors' with build type 'ament_python'
+[0.435s] Level 1:colcon.colcon_core.shell:create_environment_hook('hogpie_controller_sensors', 'ament_prefix_path')
+[0.436s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_controller_sensors/share/hogpie_controller_sensors/hook/ament_prefix_path.ps1'
+[0.438s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/groep8/rs2_ws/install/hogpie_controller_sensors/share/hogpie_controller_sensors/hook/ament_prefix_path.dsv'
+[0.439s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_controller_sensors/share/hogpie_controller_sensors/hook/ament_prefix_path.sh'
+[0.441s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.442s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.866s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/groep8/rs2_ws/src/hogpie_arm_description'
+[0.867s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.867s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.885s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/groep8/rs2_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/groep8/rs2_ws/build/my_robot_description -- -j4 -l4
+[1.298s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/groep8/rs2_ws/src/hogpie_arm_driver'
+[1.298s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.298s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.308s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/groep8/rs2_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/groep8/rs2_ws/build/my_robot_description -- -j4 -l4
+[1.328s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/groep8/rs2_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/groep8/rs2_ws/build/my_robot_description
+[1.768s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/groep8/rs2_ws/src/hogpie_controller_sensors'
+[1.769s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.769s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.784s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_robot_description)
+[1.785s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/groep8/rs2_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/groep8/rs2_ws/build/my_robot_description
+[1.789s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/my_robot_description' for CMake module files
+[1.790s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/my_robot_description' for CMake config files
+[1.790s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_description', 'cmake_prefix_path')
+[1.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.ps1'
+[1.792s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.dsv'
+[1.793s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.sh'
+[1.794s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/my_robot_description/bin'
+[1.794s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/my_robot_description/lib/pkgconfig/my_robot_description.pc'
+[1.794s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/my_robot_description/lib/python3.12/site-packages'
+[1.795s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/my_robot_description/bin'
+[1.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/package.ps1'
+[1.797s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/package.dsv'
+[1.798s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/package.sh'
+[1.800s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/package.bash'
+[1.801s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/package.zsh'
+[1.802s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/groep8/rs2_ws/install/my_robot_description/share/colcon-core/packages/my_robot_description)
+[1.804s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_robot_description)
+[1.805s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/my_robot_description' for CMake module files
+[1.807s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/my_robot_description' for CMake config files
+[1.807s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_description', 'cmake_prefix_path')
+[1.809s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.ps1'
+[1.811s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.dsv'
+[1.813s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/hook/cmake_prefix_path.sh'
+[1.815s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/my_robot_description/bin'
+[1.815s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/my_robot_description/lib/pkgconfig/my_robot_description.pc'
+[1.816s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/my_robot_description/lib/python3.12/site-packages'
+[1.817s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/my_robot_description/bin'
+[1.817s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/package.ps1'
+[1.819s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/package.dsv'
+[1.823s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/package.sh'
+[1.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/package.bash'
+[1.826s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/my_robot_description/share/my_robot_description/package.zsh'
+[1.827s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/groep8/rs2_ws/install/my_robot_description/share/colcon-core/packages/my_robot_description)
+[1.827s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/groep8/rs2_ws/src/planar_arm_moveit_config' with build type 'ament_cmake'
+[1.828s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/groep8/rs2_ws/src/planar_arm_moveit_config'
+[1.828s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.829s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.860s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/groep8/rs2_ws/build/planar_arm_moveit_config': CMAKE_PREFIX_PATH=/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/hogpie_arm_moveit_config:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/groep8/rs2_ws/build/planar_arm_moveit_config -- -j4 -l4
+[1.969s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/groep8/rs2_ws/build/planar_arm_moveit_config' returned '0': CMAKE_PREFIX_PATH=/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/hogpie_arm_moveit_config:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/groep8/rs2_ws/build/planar_arm_moveit_config -- -j4 -l4
+[1.972s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/groep8/rs2_ws/build/planar_arm_moveit_config': CMAKE_PREFIX_PATH=/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/hogpie_arm_moveit_config:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/groep8/rs2_ws/build/planar_arm_moveit_config
+[2.069s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(planar_arm_moveit_config)
+[2.070s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/planar_arm_moveit_config' for CMake module files
+[2.071s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/planar_arm_moveit_config' for CMake config files
+[2.071s] Level 1:colcon.colcon_core.shell:create_environment_hook('planar_arm_moveit_config', 'cmake_prefix_path')
+[2.072s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/hook/cmake_prefix_path.ps1'
+[2.072s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/groep8/rs2_ws/build/planar_arm_moveit_config' returned '0': CMAKE_PREFIX_PATH=/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/hogpie_arm_moveit_config:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/groep8/rs2_ws/build/planar_arm_moveit_config
+[2.073s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/hook/cmake_prefix_path.dsv'
+[2.076s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/hook/cmake_prefix_path.sh'
+[2.078s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/planar_arm_moveit_config/bin'
+[2.078s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/planar_arm_moveit_config/lib/pkgconfig/planar_arm_moveit_config.pc'
+[2.079s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/planar_arm_moveit_config/lib/python3.12/site-packages'
+[2.079s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/planar_arm_moveit_config/bin'
+[2.080s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/package.ps1'
+[2.081s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/package.dsv'
+[2.082s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/package.sh'
+[2.083s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/package.bash'
+[2.084s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/package.zsh'
+[2.085s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/colcon-core/packages/planar_arm_moveit_config)
+[2.086s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(planar_arm_moveit_config)
+[2.086s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/planar_arm_moveit_config' for CMake module files
+[2.087s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/planar_arm_moveit_config' for CMake config files
+[2.088s] Level 1:colcon.colcon_core.shell:create_environment_hook('planar_arm_moveit_config', 'cmake_prefix_path')
+[2.088s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/hook/cmake_prefix_path.ps1'
+[2.089s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/hook/cmake_prefix_path.dsv'
+[2.090s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/hook/cmake_prefix_path.sh'
+[2.091s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/planar_arm_moveit_config/bin'
+[2.091s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/planar_arm_moveit_config/lib/pkgconfig/planar_arm_moveit_config.pc'
+[2.091s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/planar_arm_moveit_config/lib/python3.12/site-packages'
+[2.092s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/planar_arm_moveit_config/bin'
+[2.092s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/package.ps1'
+[2.093s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/package.dsv'
+[2.097s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/package.sh'
+[2.098s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/package.bash'
+[2.099s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/planar_arm_moveit_config/package.zsh'
+[2.100s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/groep8/rs2_ws/install/planar_arm_moveit_config/share/colcon-core/packages/planar_arm_moveit_config)
+[2.951s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/groep8/rs2_ws/src/hogpie_arm_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_arm_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_arm_description build --build-base /home/groep8/rs2_ws/build/hogpie_arm_description/build install --record /home/groep8/rs2_ws/build/hogpie_arm_description/install.log --single-version-externally-managed install_data
+[2.963s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/groep8/rs2_ws/src/hogpie_arm_driver': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_arm_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_arm_driver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_arm_driver build --build-base /home/groep8/rs2_ws/build/hogpie_arm_driver/build install --record /home/groep8/rs2_ws/build/hogpie_arm_driver/install.log --single-version-externally-managed install_data
+[3.067s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/groep8/rs2_ws/src/hogpie_controller_sensors': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_controller_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_controller_sensors build --build-base /home/groep8/rs2_ws/build/hogpie_controller_sensors/build install --record /home/groep8/rs2_ws/build/hogpie_controller_sensors/install.log --single-version-externally-managed install_data
+[3.967s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_description' for CMake module files
+[3.968s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_description' for CMake config files
+[3.969s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_description/lib'
+[3.970s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_description/bin'
+[3.968s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/groep8/rs2_ws/src/hogpie_arm_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_arm_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_arm_description build --build-base /home/groep8/rs2_ws/build/hogpie_arm_description/build install --record /home/groep8/rs2_ws/build/hogpie_arm_description/install.log --single-version-externally-managed install_data
+[3.970s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_description/lib/pkgconfig/hogpie_arm_description.pc'
+[3.970s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages'
+[3.970s] Level 1:colcon.colcon_core.shell:create_environment_hook('hogpie_arm_description', 'pythonpath')
+[3.971s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description/hook/pythonpath.ps1'
+[3.972s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description/hook/pythonpath.dsv'
+[3.975s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description/hook/pythonpath.sh'
+[3.977s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_description/bin'
+[3.977s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hogpie_arm_description)
+[3.977s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description/package.ps1'
+[3.979s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description/package.dsv'
+[3.980s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description/package.sh'
+[3.980s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description/package.bash'
+[3.981s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_description/share/hogpie_arm_description/package.zsh'
+[3.985s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/groep8/rs2_ws/install/hogpie_arm_description/share/colcon-core/packages/hogpie_arm_description)
+[3.986s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/groep8/rs2_ws/src/hogpie_arm_moveit_config' with build type 'ament_cmake'
+[3.986s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/groep8/rs2_ws/src/hogpie_arm_moveit_config'
+[3.987s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.987s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.004s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_driver' for CMake module files
+[4.006s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/groep8/rs2_ws/src/hogpie_arm_driver' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_arm_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_arm_driver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_arm_driver build --build-base /home/groep8/rs2_ws/build/hogpie_arm_driver/build install --record /home/groep8/rs2_ws/build/hogpie_arm_driver/install.log --single-version-externally-managed install_data
+[4.007s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_driver' for CMake config files
+[4.010s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_driver/lib'
+[4.011s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_driver/bin'
+[4.011s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_driver/lib/pkgconfig/hogpie_arm_driver.pc'
+[4.012s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_driver/lib/python3.12/site-packages'
+[4.013s] Level 1:colcon.colcon_core.shell:create_environment_hook('hogpie_arm_driver', 'pythonpath')
+[4.014s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_arm_driver/share/hogpie_arm_driver/hook/pythonpath.ps1'
+[4.015s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/groep8/rs2_ws/install/hogpie_arm_driver/share/hogpie_arm_driver/hook/pythonpath.dsv'
+[4.017s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_arm_driver/share/hogpie_arm_driver/hook/pythonpath.sh'
+[4.018s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_driver/bin'
+[4.019s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hogpie_arm_driver)
+[4.019s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_driver/share/hogpie_arm_driver/package.ps1'
+[4.021s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/groep8/rs2_ws/install/hogpie_arm_driver/share/hogpie_arm_driver/package.dsv'
+[4.022s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_driver/share/hogpie_arm_driver/package.sh'
+[4.023s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_driver/share/hogpie_arm_driver/package.bash'
+[4.024s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_driver/share/hogpie_arm_driver/package.zsh'
+[4.025s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/groep8/rs2_ws/install/hogpie_arm_driver/share/colcon-core/packages/hogpie_arm_driver)
+[4.036s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/groep8/rs2_ws/build/hogpie_arm_moveit_config': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/install/hogpie_arm_description:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_moveit_config:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/test_pkg/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/hogpie_arm_driver/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/groep8/rs2_ws/build/hogpie_arm_moveit_config -- -j4 -l4
+[4.130s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/groep8/rs2_ws/build/hogpie_arm_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/install/hogpie_arm_description:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_moveit_config:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/test_pkg/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/hogpie_arm_driver/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/groep8/rs2_ws/build/hogpie_arm_moveit_config -- -j4 -l4
+[4.134s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/groep8/rs2_ws/build/hogpie_arm_moveit_config': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/install/hogpie_arm_description:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_moveit_config:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/test_pkg/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/hogpie_arm_driver/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --install /home/groep8/rs2_ws/build/hogpie_arm_moveit_config
+[4.136s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_controller_sensors' for CMake module files
+[4.137s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/groep8/rs2_ws/src/hogpie_controller_sensors' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_controller_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_controller_sensors build --build-base /home/groep8/rs2_ws/build/hogpie_controller_sensors/build install --record /home/groep8/rs2_ws/build/hogpie_controller_sensors/install.log --single-version-externally-managed install_data
+[4.137s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_controller_sensors' for CMake config files
+[4.139s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_controller_sensors/lib'
+[4.139s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_controller_sensors/bin'
+[4.139s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/pkgconfig/hogpie_controller_sensors.pc'
+[4.139s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/python3.12/site-packages'
+[4.139s] Level 1:colcon.colcon_core.shell:create_environment_hook('hogpie_controller_sensors', 'pythonpath')
+[4.140s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_controller_sensors/share/hogpie_controller_sensors/hook/pythonpath.ps1'
+[4.141s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/groep8/rs2_ws/install/hogpie_controller_sensors/share/hogpie_controller_sensors/hook/pythonpath.dsv'
+[4.142s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_controller_sensors/share/hogpie_controller_sensors/hook/pythonpath.sh'
+[4.144s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_controller_sensors/bin'
+[4.144s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hogpie_controller_sensors)
+[4.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_controller_sensors/share/hogpie_controller_sensors/package.ps1'
+[4.146s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/groep8/rs2_ws/install/hogpie_controller_sensors/share/hogpie_controller_sensors/package.dsv'
+[4.147s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_controller_sensors/share/hogpie_controller_sensors/package.sh'
+[4.148s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_controller_sensors/share/hogpie_controller_sensors/package.bash'
+[4.149s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_controller_sensors/share/hogpie_controller_sensors/package.zsh'
+[4.149s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/groep8/rs2_ws/install/hogpie_controller_sensors/share/colcon-core/packages/hogpie_controller_sensors)
+[4.186s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hogpie_arm_moveit_config)
+[4.186s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config' for CMake module files
+[4.187s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/groep8/rs2_ws/build/hogpie_arm_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/install/hogpie_arm_description:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_moveit_config:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/test_pkg/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/hogpie_arm_driver/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --install /home/groep8/rs2_ws/build/hogpie_arm_moveit_config
+[4.188s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config' for CMake config files
+[4.188s] Level 1:colcon.colcon_core.shell:create_environment_hook('hogpie_arm_moveit_config', 'cmake_prefix_path')
+[4.189s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/hook/cmake_prefix_path.ps1'
+[4.189s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/hook/cmake_prefix_path.dsv'
+[4.190s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/hook/cmake_prefix_path.sh'
+[4.191s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/bin'
+[4.191s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/lib/pkgconfig/hogpie_arm_moveit_config.pc'
+[4.191s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/lib/python3.12/site-packages'
+[4.192s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/bin'
+[4.192s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/package.ps1'
+[4.193s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/package.dsv'
+[4.193s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/package.sh'
+[4.194s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/package.bash'
+[4.194s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/package.zsh'
+[4.195s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/colcon-core/packages/hogpie_arm_moveit_config)
+[4.196s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hogpie_arm_moveit_config)
+[4.196s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config' for CMake module files
+[4.197s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config' for CMake config files
+[4.198s] Level 1:colcon.colcon_core.shell:create_environment_hook('hogpie_arm_moveit_config', 'cmake_prefix_path')
+[4.198s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/hook/cmake_prefix_path.ps1'
+[4.199s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/hook/cmake_prefix_path.dsv'
+[4.199s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/hook/cmake_prefix_path.sh'
+[4.200s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/bin'
+[4.200s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/lib/pkgconfig/hogpie_arm_moveit_config.pc'
+[4.200s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/lib/python3.12/site-packages'
+[4.201s] Level 1:colcon.colcon_core.environment:checking '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/bin'
+[4.201s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/package.ps1'
+[4.202s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/package.dsv'
+[4.206s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/package.sh'
+[4.206s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/package.bash'
+[4.207s] INFO:colcon.colcon_core.shell:Creating package script '/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/hogpie_arm_moveit_config/package.zsh'
+[4.207s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/groep8/rs2_ws/install/hogpie_arm_moveit_config/share/colcon-core/packages/hogpie_arm_moveit_config)
+[4.208s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.208s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.208s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.209s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.223s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.224s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.224s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.262s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.262s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/groep8/rs2_ws/install/local_setup.ps1'
+[4.264s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/groep8/rs2_ws/install/_local_setup_util_ps1.py'
+[4.267s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/groep8/rs2_ws/install/setup.ps1'
+[4.270s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/groep8/rs2_ws/install/local_setup.sh'
+[4.271s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/groep8/rs2_ws/install/_local_setup_util_sh.py'
+[4.272s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/groep8/rs2_ws/install/setup.sh'
+[4.276s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/groep8/rs2_ws/install/local_setup.bash'
+[4.276s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/groep8/rs2_ws/install/setup.bash'
+[4.279s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/groep8/rs2_ws/install/local_setup.zsh'
+[4.280s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/groep8/rs2_ws/install/setup.zsh'

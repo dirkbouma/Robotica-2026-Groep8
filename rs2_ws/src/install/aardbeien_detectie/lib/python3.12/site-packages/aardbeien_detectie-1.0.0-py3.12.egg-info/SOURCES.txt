@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+../build/aardbeien_detectie/aardbeien_detectie.egg-info/PKG-INFO
+../build/aardbeien_detectie/aardbeien_detectie.egg-info/SOURCES.txt
+../build/aardbeien_detectie/aardbeien_detectie.egg-info/dependency_links.txt
+../build/aardbeien_detectie/aardbeien_detectie.egg-info/entry_points.txt
+../build/aardbeien_detectie/aardbeien_detectie.egg-info/requires.txt
+../build/aardbeien_detectie/aardbeien_detectie.egg-info/top_level.txt
+../build/aardbeien_detectie/aardbeien_detectie.egg-info/zip-safe
+config/detectie_params.yaml
+launch/detectie.launch.py
+resource/aardbeien_detectie

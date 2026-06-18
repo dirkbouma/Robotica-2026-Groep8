@@ -1,0 +1,2 @@
+Invoking command in '/home/groep8/rs2_ws/build/hogpie_arm_moveit_config': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/groep8/rs2_ws/src/hogpie_arm_moveit_config -DCMAKE_INSTALL_PREFIX=/home/groep8/rs2_ws/install/hogpie_arm_moveit_config
+Invoked command in '/home/groep8/rs2_ws/build/hogpie_arm_moveit_config' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/groep8/rs2_ws/src/hogpie_arm_moveit_config -DCMAKE_INSTALL_PREFIX=/home/groep8/rs2_ws/install/hogpie_arm_moveit_config

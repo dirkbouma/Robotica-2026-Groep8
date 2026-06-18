@@ -1,0 +1,6 @@
+source;share/aardbeien_detectie/hook/pythonpath.ps1
+source;share/aardbeien_detectie/hook/pythonpath.dsv
+source;share/aardbeien_detectie/hook/pythonpath.sh
+source;share/aardbeien_detectie/hook/ament_prefix_path.ps1
+source;share/aardbeien_detectie/hook/ament_prefix_path.dsv
+source;share/aardbeien_detectie/hook/ament_prefix_path.sh

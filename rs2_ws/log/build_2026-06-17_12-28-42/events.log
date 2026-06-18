@@ -1,0 +1,91 @@
+[0.000000] (-) TimerEvent: {}
+[0.004448] (-) JobUnselected: {'identifier': 'hogpie_arm_description'}
+[0.004781] (-) JobUnselected: {'identifier': 'hogpie_arm_driver'}
+[0.004861] (-) JobUnselected: {'identifier': 'hogpie_arm_moveit_config'}
+[0.004891] (-) JobUnselected: {'identifier': 'hogpie_controller_sensors'}
+[0.004917] (-) JobUnselected: {'identifier': 'hogpie_servo_control'}
+[0.004941] (-) JobUnselected: {'identifier': 'my_robot_description'}
+[0.004965] (-) JobUnselected: {'identifier': 'planar_arm_moveit_config'}
+[0.005010] (aardbeien_detectie) JobQueued: {'identifier': 'aardbeien_detectie', 'dependencies': OrderedDict()}
+[0.009273] (aardbeien_detectie) JobStarted: {'identifier': 'aardbeien_detectie'}
+[0.099091] (-) TimerEvent: {}
+[0.207898] (-) TimerEvent: {}
+[0.312865] (-) TimerEvent: {}
+[0.413673] (-) TimerEvent: {}
+[0.515421] (-) TimerEvent: {}
+[0.617852] (-) TimerEvent: {}
+[0.719884] (-) TimerEvent: {}
+[0.825252] (-) TimerEvent: {}
+[0.926979] (-) TimerEvent: {}
+[1.027848] (-) TimerEvent: {}
+[1.131038] (-) TimerEvent: {}
+[1.233144] (-) TimerEvent: {}
+[1.337831] (-) TimerEvent: {}
+[1.438349] (-) TimerEvent: {}
+[1.543246] (-) TimerEvent: {}
+[1.643871] (-) TimerEvent: {}
+[1.744856] (-) TimerEvent: {}
+[1.850918] (-) TimerEvent: {}
+[1.951871] (-) TimerEvent: {}
+[2.056120] (-) TimerEvent: {}
+[2.157406] (-) TimerEvent: {}
+[2.260441] (-) TimerEvent: {}
+[2.361736] (-) TimerEvent: {}
+[2.462991] (-) TimerEvent: {}
+[2.564451] (-) TimerEvent: {}
+[2.665027] (-) TimerEvent: {}
+[2.765467] (-) TimerEvent: {}
+[2.866225] (-) TimerEvent: {}
+[2.967259] (-) TimerEvent: {}
+[3.068231] (-) TimerEvent: {}
+[3.168863] (-) TimerEvent: {}
+[3.271079] (-) TimerEvent: {}
+[3.375179] (-) TimerEvent: {}
+[3.477894] (-) TimerEvent: {}
+[3.544944] (aardbeien_detectie) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/aardbeien_detectie', 'build', '--build-base', '/home/groep8/rs2_ws/build/aardbeien_detectie/build', 'install', '--record', '/home/groep8/rs2_ws/build/aardbeien_detectie/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/groep8/rs2_ws/src/aardbeien_detectie', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2216-0-groep8-desktop_TIME96924', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'groep8', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/groep8/dxl_ws/install/dynamixel_sdk/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/groep8', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1955', 'SYSTEMD_EXEC_PID': '2216', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '3918', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/groep8/dxl_ws/install:/home/groep8/rs2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'groep8', 'JOURNAL_STREAM': '8:18268', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'groep8', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/groep8-desktop:@/tmp/.ICE-unix/2183,unix/groep8-desktop:/tmp/.ICE-unix/2183', 'INVOCATION_ID': '04ab95428a5642d4ae660fd141bd0c92', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.E20BR3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/groep8/rs2_ws/install/test_pkg:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/rs2_ws/install/hogpie_servo_control:/home/groep8/rs2_ws/install/hogpie_controller_sensors:/home/groep8/rs2_ws/install/hogpie_arm_moveit_config:/home/groep8/rs2_ws/install/hogpie_arm_driver:/home/groep8/rs2_ws/install/hogpie_arm_description:/home/groep8/rs2_ws/install/aardbeien_detectie:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:f62bc85d-2e58-49b8-96ef-61e920eb6db2', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/groep8/rs2_ws/build/aardbeien_detectie', 'QT_QPA_PLATFORM': 'xcb', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/groep8/rs2_ws/build/aardbeien_detectie/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/aardbeien_detectie/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/test_pkg/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/hogpie_servo_control/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/hogpie_controller_sensors/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/hogpie_arm_driver/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/hogpie_arm_description/lib/python3.12/site-packages:/home/groep8/rs2_ws/install/aardbeien_detectie/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/groep8/dxl_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/rs2_ws/install/hogpie_arm_moveit_config:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[3.578109] (-) TimerEvent: {}
+[3.678871] (-) TimerEvent: {}
+[3.779421] (-) TimerEvent: {}
+[3.883968] (-) TimerEvent: {}
+[3.985945] (-) TimerEvent: {}
+[4.087455] (-) TimerEvent: {}
+[4.188264] (-) TimerEvent: {}
+[4.290900] (-) TimerEvent: {}
+[4.393541] (-) TimerEvent: {}
+[4.464071] (aardbeien_detectie) StdoutLine: {'line': b'running egg_info\n'}
+[4.493881] (-) TimerEvent: {}
+[4.535874] (aardbeien_detectie) StdoutLine: {'line': b'writing ../../build/aardbeien_detectie/aardbeien_detectie.egg-info/PKG-INFO\n'}
+[4.536997] (aardbeien_detectie) StdoutLine: {'line': b'writing dependency_links to ../../build/aardbeien_detectie/aardbeien_detectie.egg-info/dependency_links.txt\n'}
+[4.542581] (aardbeien_detectie) StdoutLine: {'line': b'writing entry points to ../../build/aardbeien_detectie/aardbeien_detectie.egg-info/entry_points.txt\n'}
+[4.551990] (aardbeien_detectie) StdoutLine: {'line': b'writing requirements to ../../build/aardbeien_detectie/aardbeien_detectie.egg-info/requires.txt\n'}
+[4.552464] (aardbeien_detectie) StdoutLine: {'line': b'writing top-level names to ../../build/aardbeien_detectie/aardbeien_detectie.egg-info/top_level.txt\n'}
+[4.594067] (-) TimerEvent: {}
+[4.657358] (aardbeien_detectie) StdoutLine: {'line': b"reading manifest file '../../build/aardbeien_detectie/aardbeien_detectie.egg-info/SOURCES.txt'\n"}
+[4.658062] (aardbeien_detectie) StdoutLine: {'line': b"writing manifest file '../../build/aardbeien_detectie/aardbeien_detectie.egg-info/SOURCES.txt'\n"}
+[4.658195] (aardbeien_detectie) StdoutLine: {'line': b'running build\n'}
+[4.658297] (aardbeien_detectie) StdoutLine: {'line': b'running build_py\n'}
+[4.658393] (aardbeien_detectie) StdoutLine: {'line': b'copying aardbeien_detectie/pi2_display_node.py -> /home/groep8/rs2_ws/build/aardbeien_detectie/build/lib/aardbeien_detectie\n'}
+[4.658492] (aardbeien_detectie) StdoutLine: {'line': b'running install\n'}
+[4.668774] (aardbeien_detectie) StdoutLine: {'line': b'running install_lib\n'}
+[4.694434] (-) TimerEvent: {}
+[4.711963] (aardbeien_detectie) StdoutLine: {'line': b'copying /home/groep8/rs2_ws/build/aardbeien_detectie/build/lib/aardbeien_detectie/pi2_display_node.py -> /home/groep8/rs2_ws/install/aardbeien_detectie/lib/python3.12/site-packages/aardbeien_detectie\n'}
+[4.713338] (aardbeien_detectie) StdoutLine: {'line': b'byte-compiling /home/groep8/rs2_ws/install/aardbeien_detectie/lib/python3.12/site-packages/aardbeien_detectie/pi2_display_node.py to pi2_display_node.cpython-312.pyc\n'}
+[4.715801] (aardbeien_detectie) StdoutLine: {'line': b'running install_data\n'}
+[4.716430] (aardbeien_detectie) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.764012] (aardbeien_detectie) StdoutLine: {'line': b"removing '/home/groep8/rs2_ws/install/aardbeien_detectie/lib/python3.12/site-packages/aardbeien_detectie-1.0.0-py3.12.egg-info' (and everything under it)\n"}
+[4.767847] (aardbeien_detectie) StdoutLine: {'line': b'Copying ../../build/aardbeien_detectie/aardbeien_detectie.egg-info to /home/groep8/rs2_ws/install/aardbeien_detectie/lib/python3.12/site-packages/aardbeien_detectie-1.0.0-py3.12.egg-info\n'}
+[4.769901] (aardbeien_detectie) StdoutLine: {'line': b'running install_scripts\n'}
+[4.794621] (-) TimerEvent: {}
+[4.895318] (-) TimerEvent: {}
+[5.000594] (-) TimerEvent: {}
+[5.101702] (-) TimerEvent: {}
+[5.202761] (-) TimerEvent: {}
+[5.236499] (aardbeien_detectie) StdoutLine: {'line': b'Installing detectie_node script to /home/groep8/rs2_ws/install/aardbeien_detectie/lib/aardbeien_detectie\n'}
+[5.237375] (aardbeien_detectie) StdoutLine: {'line': b'Installing kleur_node script to /home/groep8/rs2_ws/install/aardbeien_detectie/lib/aardbeien_detectie\n'}
+[5.243030] (aardbeien_detectie) StdoutLine: {'line': b"writing list of installed files to '/home/groep8/rs2_ws/build/aardbeien_detectie/install.log'\n"}
+[5.302930] (-) TimerEvent: {}
+[5.406529] (-) TimerEvent: {}
+[5.486113] (aardbeien_detectie) CommandEnded: {'returncode': 0}
+[5.509098] (-) TimerEvent: {}
+[5.538769] (aardbeien_detectie) JobEnded: {'identifier': 'aardbeien_detectie', 'rc': 0}
+[5.540903] (-) EventReactorShutdown: {}

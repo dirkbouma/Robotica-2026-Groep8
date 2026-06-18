@@ -1,0 +1,25 @@
+[2.593s] Invoking command in '/home/groep8/rs2_ws/src/aardbeien_detectie': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/aardbeien_detectie/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/aardbeien_detectie/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aardbeien_detectie build --build-base /home/groep8/rs2_ws/build/aardbeien_detectie/build install --record /home/groep8/rs2_ws/build/aardbeien_detectie/install.log --single-version-externally-managed install_data
+[3.156s] running egg_info
+[3.189s] writing ../../build/aardbeien_detectie/aardbeien_detectie.egg-info/PKG-INFO
+[3.190s] writing dependency_links to ../../build/aardbeien_detectie/aardbeien_detectie.egg-info/dependency_links.txt
+[3.194s] writing entry points to ../../build/aardbeien_detectie/aardbeien_detectie.egg-info/entry_points.txt
+[3.195s] writing requirements to ../../build/aardbeien_detectie/aardbeien_detectie.egg-info/requires.txt
+[3.196s] writing top-level names to ../../build/aardbeien_detectie/aardbeien_detectie.egg-info/top_level.txt
+[3.279s] reading manifest file '../../build/aardbeien_detectie/aardbeien_detectie.egg-info/SOURCES.txt'
+[3.280s] writing manifest file '../../build/aardbeien_detectie/aardbeien_detectie.egg-info/SOURCES.txt'
+[3.281s] running build
+[3.281s] running build_py
+[3.283s] copying aardbeien_detectie/strawberry_detection_node.py -> /home/groep8/rs2_ws/build/aardbeien_detectie/build/lib/aardbeien_detectie
+[3.286s] running install
+[3.296s] running install_lib
+[3.342s] copying /home/groep8/rs2_ws/build/aardbeien_detectie/build/lib/aardbeien_detectie/strawberry_detection_node.py -> /home/groep8/rs2_ws/install/aardbeien_detectie/lib/python3.12/site-packages/aardbeien_detectie
+[3.346s] byte-compiling /home/groep8/rs2_ws/install/aardbeien_detectie/lib/python3.12/site-packages/aardbeien_detectie/strawberry_detection_node.py to strawberry_detection_node.cpython-312.pyc
+[3.359s] running install_data
+[3.360s] running install_egg_info
+[3.421s] removing '/home/groep8/rs2_ws/install/aardbeien_detectie/lib/python3.12/site-packages/aardbeien_detectie-1.0.0-py3.12.egg-info' (and everything under it)
+[3.422s] Copying ../../build/aardbeien_detectie/aardbeien_detectie.egg-info to /home/groep8/rs2_ws/install/aardbeien_detectie/lib/python3.12/site-packages/aardbeien_detectie-1.0.0-py3.12.egg-info
+[3.427s] running install_scripts
+[3.738s] Installing detectie_node script to /home/groep8/rs2_ws/install/aardbeien_detectie/lib/aardbeien_detectie
+[3.740s] Installing kleur_node script to /home/groep8/rs2_ws/install/aardbeien_detectie/lib/aardbeien_detectie
+[3.741s] writing list of installed files to '/home/groep8/rs2_ws/build/aardbeien_detectie/install.log'
+[3.945s] Invoked command in '/home/groep8/rs2_ws/src/aardbeien_detectie' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/aardbeien_detectie/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/aardbeien_detectie/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aardbeien_detectie build --build-base /home/groep8/rs2_ws/build/aardbeien_detectie/build install --record /home/groep8/rs2_ws/build/aardbeien_detectie/install.log --single-version-externally-managed install_data

@@ -1,0 +1,3 @@
+[console_scripts]
+detectie_node = aardbeien_detectie.strawberry_detection_node:main
+kleur_node = aardbeien_detectie.color_detection_node:main

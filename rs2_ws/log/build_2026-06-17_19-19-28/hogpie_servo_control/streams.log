@@ -1,0 +1,27 @@
+[2.255s] Invoking command in '/home/groep8/rs2_ws/src/hogpie_servo_control': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_servo_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_servo_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_servo_control build --build-base /home/groep8/rs2_ws/build/hogpie_servo_control/build install --record /home/groep8/rs2_ws/build/hogpie_servo_control/install.log --single-version-externally-managed install_data
+[2.724s] running egg_info
+[2.753s] writing ../../build/hogpie_servo_control/hogpie_servo_control.egg-info/PKG-INFO
+[2.753s] writing dependency_links to ../../build/hogpie_servo_control/hogpie_servo_control.egg-info/dependency_links.txt
+[2.757s] writing entry points to ../../build/hogpie_servo_control/hogpie_servo_control.egg-info/entry_points.txt
+[2.757s] writing requirements to ../../build/hogpie_servo_control/hogpie_servo_control.egg-info/requires.txt
+[2.761s] writing top-level names to ../../build/hogpie_servo_control/hogpie_servo_control.egg-info/top_level.txt
+[2.831s] reading manifest file '../../build/hogpie_servo_control/hogpie_servo_control.egg-info/SOURCES.txt'
+[2.832s] writing manifest file '../../build/hogpie_servo_control/hogpie_servo_control.egg-info/SOURCES.txt'
+[2.832s] running build
+[2.832s] running build_py
+[2.833s] copying hogpie_servo_control/joint1controller_node.py -> /home/groep8/rs2_ws/build/hogpie_servo_control/build/lib/hogpie_servo_control
+[2.833s] running install
+[2.843s] running install_lib
+[2.874s] copying /home/groep8/rs2_ws/build/hogpie_servo_control/build/lib/hogpie_servo_control/joint1controller_node.py -> /home/groep8/rs2_ws/install/hogpie_servo_control/lib/python3.12/site-packages/hogpie_servo_control
+[2.875s] byte-compiling /home/groep8/rs2_ws/install/hogpie_servo_control/lib/python3.12/site-packages/hogpie_servo_control/joint1controller_node.py to joint1controller_node.cpython-312.pyc
+[2.876s] running install_data
+[2.877s] running install_egg_info
+[2.911s] removing '/home/groep8/rs2_ws/install/hogpie_servo_control/lib/python3.12/site-packages/hogpie_servo_control-0.0.0-py3.12.egg-info' (and everything under it)
+[2.912s] Copying ../../build/hogpie_servo_control/hogpie_servo_control.egg-info to /home/groep8/rs2_ws/install/hogpie_servo_control/lib/python3.12/site-packages/hogpie_servo_control-0.0.0-py3.12.egg-info
+[2.914s] running install_scripts
+[3.219s] Installing ax12_driver script to /home/groep8/rs2_ws/install/hogpie_servo_control/lib/hogpie_servo_control
+[3.221s] Installing encoder_jointstate script to /home/groep8/rs2_ws/install/hogpie_servo_control/lib/hogpie_servo_control
+[3.221s] Installing encoder_node script to /home/groep8/rs2_ws/install/hogpie_servo_control/lib/hogpie_servo_control
+[3.223s] Installing joint1_controller script to /home/groep8/rs2_ws/install/hogpie_servo_control/lib/hogpie_servo_control
+[3.226s] writing list of installed files to '/home/groep8/rs2_ws/build/hogpie_servo_control/install.log'
+[3.378s] Invoked command in '/home/groep8/rs2_ws/src/hogpie_servo_control' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_servo_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_servo_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_servo_control build --build-base /home/groep8/rs2_ws/build/hogpie_servo_control/build install --record /home/groep8/rs2_ws/build/hogpie_servo_control/install.log --single-version-externally-managed install_data

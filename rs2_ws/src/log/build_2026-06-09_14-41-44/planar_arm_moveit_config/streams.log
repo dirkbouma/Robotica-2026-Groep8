@@ -1,0 +1,59 @@
+[0.046s] Invoking command in '/home/groep8/rs2_ws/src/build/planar_arm_moveit_config': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/src/install/my_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/groep8/rs2_ws/src/install/my_robot_description:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/groep8/rs2_ws/install/test_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/groep8/rs2_ws/src/planar_arm_moveit_config -DCMAKE_INSTALL_PREFIX=/home/groep8/rs2_ws/src/install/planar_arm_moveit_config
+[0.440s] -- The C compiler identification is GNU 13.3.0
+[1.071s] -- The CXX compiler identification is GNU 13.3.0
+[1.184s] -- Detecting C compiler ABI info
+[1.590s] -- Detecting C compiler ABI info - done
+[1.610s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.611s] -- Detecting C compile features
+[1.612s] -- Detecting C compile features - done
+[1.641s] -- Detecting CXX compiler ABI info
+[2.196s] -- Detecting CXX compiler ABI info - done
+[2.225s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.225s] -- Detecting CXX compile features
+[2.225s] -- Detecting CXX compile features - done
+[2.235s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.126s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[4.092s] -- Configuring done (4.0s)
+[4.106s] -- Generating done (0.0s)
+[4.117s] -- Build files have been written to: /home/groep8/rs2_ws/src/build/planar_arm_moveit_config
+[4.140s] Invoked command in '/home/groep8/rs2_ws/src/build/planar_arm_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/src/install/my_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/groep8/rs2_ws/src/install/my_robot_description:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/groep8/rs2_ws/install/test_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/groep8/rs2_ws/src/planar_arm_moveit_config -DCMAKE_INSTALL_PREFIX=/home/groep8/rs2_ws/src/install/planar_arm_moveit_config
+[4.141s] Invoking command in '/home/groep8/rs2_ws/src/build/planar_arm_moveit_config': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/src/install/my_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/groep8/rs2_ws/src/install/my_robot_description:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/groep8/rs2_ws/install/test_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/groep8/rs2_ws/src/build/planar_arm_moveit_config -- -j4 -l4
+[4.343s] Invoked command in '/home/groep8/rs2_ws/src/build/planar_arm_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/src/install/my_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/groep8/rs2_ws/src/install/my_robot_description:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/groep8/rs2_ws/install/test_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/groep8/rs2_ws/src/build/planar_arm_moveit_config -- -j4 -l4
+[4.344s] Invoking command in '/home/groep8/rs2_ws/src/build/planar_arm_moveit_config': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/src/install/my_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/groep8/rs2_ws/src/install/my_robot_description:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/groep8/rs2_ws/install/test_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/groep8/rs2_ws/src/build/planar_arm_moveit_config
+[4.376s] -- Install configuration: ""
+[4.376s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/ament_index/resource_index/package_run_dependencies/planar_arm_moveit_config
+[4.376s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/ament_index/resource_index/parent_prefix_path/planar_arm_moveit_config
+[4.379s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/environment/ament_prefix_path.sh
+[4.379s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/environment/ament_prefix_path.dsv
+[4.379s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/environment/path.sh
+[4.379s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/environment/path.dsv
+[4.380s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/local_setup.bash
+[4.380s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/local_setup.sh
+[4.381s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/local_setup.zsh
+[4.381s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/local_setup.dsv
+[4.381s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/package.dsv
+[4.381s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/ament_index/resource_index/packages/planar_arm_moveit_config
+[4.381s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/cmake/planar_arm_moveit_configConfig.cmake
+[4.382s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/cmake/planar_arm_moveit_configConfig-version.cmake
+[4.382s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/package.xml
+[4.382s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch
+[4.382s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/move_group.launch.py
+[4.383s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/static_virtual_joint_tfs.launch.py
+[4.383s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/warehouse_db.launch.py
+[4.385s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/setup_assistant.launch.py
+[4.385s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/moveit_rviz.launch.py
+[4.385s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/spawn_controllers.launch.py
+[4.385s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/demo.launch.py
+[4.386s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/launch/rsp.launch.py
+[4.386s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config
+[4.386s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/joint_limits.yaml
+[4.389s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/moveit.rviz
+[4.391s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/moveit_controllers.yaml
+[4.392s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/planar_arm.srdf
+[4.393s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/planar_arm.urdf.xacro
+[4.393s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/planar_arm.ros2_control.xacro
+[4.395s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/kinematics.yaml
+[4.397s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/pilz_cartesian_limits.yaml
+[4.399s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/config/initial_positions.yaml
+[4.399s] -- Installing: /home/groep8/rs2_ws/src/install/planar_arm_moveit_config/share/planar_arm_moveit_config/.setup_assistant
+[4.410s] Invoked command in '/home/groep8/rs2_ws/src/build/planar_arm_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/groep8/rs2_ws/src/install/my_robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/groep8/rs2_ws/src/install/my_robot_description:/home/groep8/rs2_ws/install/planar_arm_moveit_config:/home/groep8/rs2_ws/install/my_robot_description:/home/groep8/dxl_ws/install/dynamixel_sdk_examples:/home/groep8/dxl_ws/install/dynamixel_sdk_custom_interfaces:/home/groep8/dxl_ws/install/dynamixel_sdk:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/groep8/rs2_ws/install/test_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/groep8/rs2_ws/src/build/planar_arm_moveit_config

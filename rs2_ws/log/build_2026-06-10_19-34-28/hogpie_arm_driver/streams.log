@@ -1,0 +1,22 @@
+[2.816s] Invoking command in '/home/groep8/rs2_ws/src/hogpie_arm_driver': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_arm_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_arm_driver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_arm_driver build --build-base /home/groep8/rs2_ws/build/hogpie_arm_driver/build install --record /home/groep8/rs2_ws/build/hogpie_arm_driver/install.log --single-version-externally-managed install_data
+[3.267s] running egg_info
+[3.294s] writing ../../build/hogpie_arm_driver/hogpie_arm_driver.egg-info/PKG-INFO
+[3.294s] writing dependency_links to ../../build/hogpie_arm_driver/hogpie_arm_driver.egg-info/dependency_links.txt
+[3.299s] writing entry points to ../../build/hogpie_arm_driver/hogpie_arm_driver.egg-info/entry_points.txt
+[3.299s] writing requirements to ../../build/hogpie_arm_driver/hogpie_arm_driver.egg-info/requires.txt
+[3.301s] writing top-level names to ../../build/hogpie_arm_driver/hogpie_arm_driver.egg-info/top_level.txt
+[3.369s] reading manifest file '../../build/hogpie_arm_driver/hogpie_arm_driver.egg-info/SOURCES.txt'
+[3.384s] writing manifest file '../../build/hogpie_arm_driver/hogpie_arm_driver.egg-info/SOURCES.txt'
+[3.384s] running build
+[3.384s] running build_py
+[3.385s] running install
+[3.406s] running install_lib
+[3.480s] running install_data
+[3.482s] running install_egg_info
+[3.558s] removing '/home/groep8/rs2_ws/install/hogpie_arm_driver/lib/python3.12/site-packages/hogpie_arm_driver-0.0.0-py3.12.egg-info' (and everything under it)
+[3.563s] Copying ../../build/hogpie_arm_driver/hogpie_arm_driver.egg-info to /home/groep8/rs2_ws/install/hogpie_arm_driver/lib/python3.12/site-packages/hogpie_arm_driver-0.0.0-py3.12.egg-info
+[3.571s] running install_scripts
+[3.920s] Installing fake_joint_state_publisher script to /home/groep8/rs2_ws/install/hogpie_arm_driver/lib/hogpie_arm_driver
+[3.921s] Installing trajectory_server script to /home/groep8/rs2_ws/install/hogpie_arm_driver/lib/hogpie_arm_driver
+[3.923s] writing list of installed files to '/home/groep8/rs2_ws/build/hogpie_arm_driver/install.log'
+[4.092s] Invoked command in '/home/groep8/rs2_ws/src/hogpie_arm_driver' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/groep8/rs2_ws/build/hogpie_arm_driver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/groep8/rs2_ws/install/hogpie_arm_driver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hogpie_arm_driver build --build-base /home/groep8/rs2_ws/build/hogpie_arm_driver/build install --record /home/groep8/rs2_ws/build/hogpie_arm_driver/install.log --single-version-externally-managed install_data
