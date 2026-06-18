@@ -1,0 +1,64 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Pagina-1" id="PT9qf5dh-bP3kU7-_T6V">
+    <mxGraphModel dx="680" dy="392" grid="1" gridSize="1" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-1" value="Raspberry pi 4&amp;nbsp;&lt;div&gt;1 GB&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Computer&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7EA6E0;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="440" y="240" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-3" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 8px; background-color: initial;&quot;&gt;Inputs&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;rotation=90;align=center;" vertex="1" parent="1">
+          <mxGeometry x="415" y="292" width="50" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="ynY3-uVoE1p2fvuOd6uo-4" target="ynY3-uVoE1p2fvuOd6uo-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-4" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Communicatie&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="469" y="232" width="65" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ynY3-uVoE1p2fvuOd6uo-6" target="ynY3-uVoE1p2fvuOd6uo-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-6" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;Batterij&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="351" y="124" width="64" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-8" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Battery management&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="351" y="188" width="64" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.982;exitY=0.96;exitDx=0;exitDy=0;entryX=0.045;entryY=0.04;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="ynY3-uVoE1p2fvuOd6uo-8" target="ynY3-uVoE1p2fvuOd6uo-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="428" y="234" as="sourcePoint" />
+            <mxPoint x="478" y="184" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-11" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 8px; background-color: initial;&quot;&gt;Interface&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;align=center;" vertex="1" parent="1">
+          <mxGeometry x="535" y="292" width="50" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="ynY3-uVoE1p2fvuOd6uo-12" target="ynY3-uVoE1p2fvuOd6uo-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-12" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;PS5 Hall-effect Joysticks&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="301" y="283.5" width="82" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-15" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;5,5 Inch tft scherm touchscreen&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="632" y="283.5" width="101.5" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-18" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ynY3-uVoE1p2fvuOd6uo-11" target="ynY3-uVoE1p2fvuOd6uo-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="592" y="254" as="sourcePoint" />
+            <mxPoint x="642" y="204" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-19" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;WiFi&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="469.5" y="167" width="64" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-21" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;HDMI&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="589" y="278" width="21" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ynY3-uVoE1p2fvuOd6uo-22" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;Li-ion 5000 mAh 3.7V&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="382" y="151" width="63" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
